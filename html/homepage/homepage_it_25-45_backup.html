@@ -1,16 +1,20 @@
 <md-content>
     <div class="ps_content md-padding" layout-gt-sm="row" layout-align="start start">
-        <div flex="0" flex-md="10" flex-lg="15" flex-xl="25"></div>
-        <div flex-sm="100" flex-md="80" flex-lg="70" flex-xl="50" flex="100" layout="column">
+        <div flex="0" flex-md="15" flex-lg="15" flex-xl="25"></div>
+        <div flex-sm="100" flex-md="24" flex-lg="25" flex-xl="15" flex="100" layout="column">
 
             <!-- Benvenuti in reperio -->
-            <md-card class="cardbox default-card welcome-reperio">
-                <md-card-title>
+            <md-card class="cardbox default-card welcome-reperio" style="background: rgba(232, 129, 39, 1) !important;">
+                <md-card-title style="padding: 50px 16px;">
                     <md-card-title-text>
                         <h1 class="md-headline">Benvenuti in <b>Reperio</b></h1>
                         <h2 class="md-headline">Il portale di ricerca USI all’interno di <i>swisscovery</i></h2>
                     </md-card-title-text>
                 </md-card-title>
+            </md-card>
+        </div>
+        <div flex-sm="100" flex-md="46" flex-lg="45" flex-xl="35" flex="100" layout="column">
+            <md-card class="cardbox default-card welcome-reperio-text">
                 <md-card-content>
                     <p>
                         Qui potete effettuare ricerche semplici e avanzate di libri, e-book, <a href="https://consortium.ch/lizenzen/?lang=it" target="_blank">periodici</a>, <a href="https://consortium.ch/lizenzen/?lang=it" target="_blank">banche dati</a> e altri media.
@@ -35,6 +39,13 @@
                     </p>
                 </md-card-content>
             </md-card>
+        </div>
+        <div flex="0" flex-md="15" flex-lg="15" flex-xl="25"></div>
+    </div>
+
+    <div class="ps_content md-padding" layout-gt-sm="row" layout-align="start start">
+        <div flex="0" flex-md="10" flex-lg="15" flex-xl="25"></div>
+        <div flex-sm="100" flex-md="80" flex-lg="70" flex-xl="50" flex="100" layout="column">
 
             <!-- Ambienti di ricerca -->
             <md-card class="cardbox default-card">

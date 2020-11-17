@@ -11,26 +11,46 @@
     app.controller('ItemCommentComponentController', [function () {
         var vm = this;
 
-        vm.getSomeInfo = getSomeInfo;
+        vm.getItemId = getItemId;
         vm.getLibrary = getLibrary;
+        vm.callAlmaApi = callAlmaApi;
 
-        function getSomeInfo() {
-            return vm.parentCtrl.item.adaptor;
+        function getItemId() {
+            return vm.parentCtrl.loc.items[0].item;
         }
 
         function getLibrary() {
             if (vm.parentCtrl.loc.location.libraryCode == 'MEAA') {
-                return 'Qui posso intervenire se la policy è 65 Same day loan';
+                return 'Library MEAA';
             }
             else {
                 return '';
+            }
+        }
+
+        function callAlmaApi() {
+            var itemId = vm.parentCtrl.loc.items[0].item;
+            var holdingId = vm.parentCtrl.results[0][0].location.holdId;
+            var mmsId = vm.parentCtrl.results[0][0].location.ilsApiId;
+            var apiURL = 'http://biblio.arc.usi.ch/files/tests/alma/api-proxy-bib.php?mms=' + mmsId + '&hold=' + holdingId + '&item=' + itemId;
+
+            const Http = new XMLHttpRequest();
+            Http.open("GET", apiURL);
+            Http.send();
+
+            var itempolicy = false;
+            Http.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    console.log(JSON.parse(Http.responseText).item_data.policy.value)
+                    return JSON.parse(Http.responseText).item_data.policy.value;
+                }
             }
         }
     }]);
     app.component('itemCommentComponent', {
         bindings: {parentCtrl: '<'},
         controller: 'ItemCommentComponentController',
-        template: '<span style="padding: 10px; font-size: 0.9em; color: red; display: flex; max-width: 200px;">{{$ctrl.getLibrary()}}</span>',
+        template: '<span style="padding: 10px; font-size: 0.9em; color: red; display: flex; max-width: 200px;">{{$ctrl.getLibrary()}}<br />{{$ctrl.getItemId()}}<br />{{$ctrl.callAlmaApi()}}</span>',
     });
     app.component('prmLocationItemAfter', {
         bindings: {parentCtrl: '<'},

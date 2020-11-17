@@ -44,6 +44,39 @@ prm-brief-result .item-title {
 prm-search-result-availability-line {
 	font-family: 'standard_ct_medium', 'standard_ct_lightlight', Source Sans Pro, Helvetica Neue, Helvetica, Arial, sans-serif;
 	font-weight: 100;
+	font-size: 14px;
+}
+
+/* HOMEPAGE */
+.ps_content a {
+	color: rgba(232, 129, 39, 1) !important;
+	text-decoration-color: rgba(232, 129, 39, 1) !important;
+}
+.ps_content a:hover {
+	background: none !important;
+}
+.homepage-reperio-gerarchia md-card.default-card, .homepage-reperio-gerarchia prm-featured-result-item md-card {
+	font-size: 22px;
+	font-weight: 600;
+}
+.homepage-reperio-gerarchia md-card.default-card a, .homepage-reperio-gerarchia prm-featured-result-item md-card a {
+	text-decoration: none !important;
+}
+.homepage-reperio-gerarchia md-card.default-card a:hover, .homepage-reperio-gerarchia prm-featured-result-item md-card a:hover {
+	color: #000000 !important;
+	background: none !important;
+	text-decoration: underline !important;
+	text-decoration-color: rgba(232, 129, 39, 1) !important;
+}
+.homepage-reperio-gerarchia md-card.tutto-usi md-card-title:not(#featuredResultTitle), .homepage-reperio-gerarchia md-card.tutto-swisscovery md-card-title:not(#featuredResultTitle) {
+	padding-bottom: 0;
+}
+.homepage-reperio-gerarchia md-card.biblio-aam md-card-title:not(#featuredResultTitle), .homepage-reperio-gerarchia md-card.biblio-bul md-card-title:not(#featuredResultTitle) {
+	padding-bottom: 16px;
+}
+.homepage-reperio-scope {
+	text-align: center;
+	border: 1px dotted grey;
 }
 
 /******************************************************************************/
