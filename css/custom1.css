@@ -20,13 +20,13 @@
 /* STANDARD LIGHT */
 body {
 	font-family: 'standard_ct_lightlight', Source Sans Pro, Helvetica Neue, Helvetica, Arial, sans-serif;
+	color: rgb(0,0,0);
 }
 /* Facets: facet value; */
 .available-facets .section-content .md-chips .md-chip strong span{
 	font-family: 'standard_ct_lightlight', Source Sans Pro, Helvetica Neue, Helvetica, Arial, sans-serif;
 	font-weight: 100;
 }
-
 
 /* STANDARD MEDIUM */
 /* Brief results: document title  */
@@ -47,37 +47,7 @@ prm-search-result-availability-line {
 	font-size: 14px;
 }
 
-/* HOMEPAGE */
-.ps_content a {
-	color: rgba(232, 129, 39, 1) !important;
-	text-decoration-color: rgba(232, 129, 39, 1) !important;
-}
-.ps_content a:hover {
-	background: none !important;
-}
-.homepage-reperio-gerarchia md-card.default-card, .homepage-reperio-gerarchia prm-featured-result-item md-card {
-	font-size: 22px;
-	font-weight: 600;
-}
-.homepage-reperio-gerarchia md-card.default-card a, .homepage-reperio-gerarchia prm-featured-result-item md-card a {
-	text-decoration: none !important;
-}
-.homepage-reperio-gerarchia md-card.default-card a:hover, .homepage-reperio-gerarchia prm-featured-result-item md-card a:hover {
-	color: #000000 !important;
-	background: none !important;
-	text-decoration: underline !important;
-	text-decoration-color: rgba(232, 129, 39, 1) !important;
-}
-.homepage-reperio-gerarchia md-card.tutto-usi md-card-title:not(#featuredResultTitle), .homepage-reperio-gerarchia md-card.tutto-swisscovery md-card-title:not(#featuredResultTitle) {
-	padding-bottom: 0;
-}
-.homepage-reperio-gerarchia md-card.biblio-aam md-card-title:not(#featuredResultTitle), .homepage-reperio-gerarchia md-card.biblio-bul md-card-title:not(#featuredResultTitle) {
-	padding-bottom: 16px;
-}
-.homepage-reperio-scope {
-	text-align: center;
-	border: 1px dotted grey;
-}
+
 
 /******************************************************************************/
 /******************************************************************************/
@@ -94,10 +64,11 @@ prm-search-result-availability-line {
 #mainMenu > div > a, button#signInBtn, button#more-links-button, prm-topbar > div > prm-user-area-expandable > md-menu > button > span {
     font-size: small !important;
     font-weight: 500 !important;
+    color: #111 !important;
 }
     /*hover effect Navigation and buttons*/
     #mainMenu > div > a:hover, button#signInBtn:hover, prm-topbar > div > prm-user-area-expandable > md-menu > button:hover, button#more-links-button:hover,
-    prm-search-bookmark-filter > a:hover, a#favorites-button:hover, a#search-button:hover, .md-button.button-as-link:hover:not([disabled]) {
+    prm-search-bookmark-filter > a:hover, a#favorites-button:hover, a#search-button:hover, .md-button.button-as-link:hover:not([disabled]), .md-button.button-link:hover:not([disabled]), .md-button.button-link:focus:not([disabled]) {
         background-color: #ddd !important;
         color: #111 !important;
     }
@@ -132,6 +103,11 @@ button.switch-to-advanced.zero-margin.button-with-icon.md-button.md-primoExplore
 .md-button.button-confirm {
     border: 1px solid #ffffff;
 }
+.md-button.md-primary:hover:not([disabled]), .md-button.md-primary:focus:not([disabled]), prm-favorites-labels.md-chips.md-chip.toggleable-chip:not(.chip-toggled-on).md-chip-content:hover:not([disabled]), prm-favorites-labels.md-chips.md-chip:not(.chip-toggled-on).md-chip-content:hover:not([disabled]), .barprm-authentication.md-button:hover:not([disabled]), button.dismiss-alert-button:hover{
+	color: #fff;
+	background-color:#111;
+}
+
 /*the main color border on mobile view*/
 @media (max-width: 599px) {
     prm-topbar .top-nav-bar {
@@ -232,7 +208,7 @@ md-card-content.prm-primary-bg {
 
 /*links in the legal part of the footer*/
 a.ps_link.legal, span.legal {
-    font-size: small;
+    font-size: 14px;
     font-weight: 300;
 }
 
@@ -260,7 +236,7 @@ prm-static.md-padding.flex {
 
 /*font color on white background*/
 .hoverable-over-dark, .md-button.button-over-dark, prm-main-menu[menu-type=full] .md-button.md-focused, prm-main-menu[menu-type=full] .md-button .md-input-container-dummy > .md-select-dummy:focus, prm-main-menu[menu-type=full] .md-button:focus, prm-main-menu[menu-type=full] .md-button:hover, prm-main-menu[menu-type=full] .md-button md-select:focus, prm-main-menu[menu-type=full] .overlay-menu-item.md-focused, prm-main-menu[menu-type=full] .overlay-menu-item .md-input-container-dummy > .md-select-dummy:focus, prm-main-menu[menu-type=full] .overlay-menu-item:focus, prm-main-menu[menu-type=full] .overlay-menu-item:hover, prm-main-menu[menu-type=full] .overlay-menu-item md-select:focus, prm-main-menu[menu-type=full] md-button:focus, prm-main-menu[menu-type=full] md-button:hover, prm-topbar .md-button, prm-user-area .md-button.user-menu-button, prm-user-area md-fab-toolbar ._md-fab-action-item .md-button, prm-user-area md-fab-toolbar ._md-fab-action-item md-input-container, prm-user-area md-fab-toolbar .md-fab-action-item .md-button, prm-user-area md-fab-toolbar .md-fab-action-item md-input-container {
-    color: #222;
+    color: #222 !important;
 }
 
 /***************  Brief results  ******************/
@@ -310,6 +286,11 @@ div.custom-links-container.layout-wrap.layout-align-sm-start-start.layout-align-
     background-color: #6b6b6b !important;
 }
 
+/*Facet titles*/
+span.section-title-header:hover {
+	color: #8a8a8a !important;
+}
+
 /*underlined search results*/
 /*.text-highlight, mark {
     box-shadow: inset 0 -0.15em 0 0 #8dd8d8;
@@ -326,6 +307,11 @@ div.custom-links-container.layout-wrap.layout-align-sm-start-start.layout-align-
 /*space between item details in Fullview*/
 #item-details > div > div {
     margin-bottom: .8em !important;
+}
+
+/*fullview background of the left part*/
+.md-dialog-container.fixed-container {
+	background-color: #444 !important;
 }
 
 /*background color of the signin window and the fullscreen navigation*/
@@ -349,6 +335,13 @@ prm-location-items-after > div > span > a > img {
     vertical-align: middle;
     max-width: 30px;
     margin: 4px 12px;
+}
+/*Library card Personal details display*/
+#personalDetails>md-card-content>div {
+	flex-flow: column;
+}
+#prm_contact\.address_1 {
+	width: 400px;
 }
 
 /******************************************************************************/
@@ -382,8 +375,6 @@ a > h3:hover {
 /******************************************************************************/
 /******************************************************************************/
 /******************************************************************************/
-
-
 
 
 /*****************This two entries are the background of the primary color*******************/
@@ -445,3 +436,42 @@ button.switch-to-advanced.zero-margin.button-with-icon.md-button.md-primoExplore
     font-weight: 700;
 }
 
+
+/* USI REPERIO STYLING */
+
+/* Logo wide */
+prm-logo .product-logo {
+	padding: 0.6em;
+}
+
+/* Homepage */
+.ps_content a:hover {
+	background: none !important;
+}
+.reperio-structure a {
+	color: rgba(232, 129, 39, 1) !important;
+	text-decoration-color: rgba(232, 129, 39, 1) !important;
+}
+.homepage-reperio-gerarchia md-card.default-card, .homepage-reperio-gerarchia prm-featured-result-item md-card {
+	font-size: 22px;
+	font-weight: 600;
+}
+.homepage-reperio-gerarchia md-card.default-card a, .homepage-reperio-gerarchia prm-featured-result-item md-card a {
+	text-decoration: none !important;
+}
+.homepage-reperio-gerarchia md-card.default-card a:hover, .homepage-reperio-gerarchia prm-featured-result-item md-card a:hover {
+	color: #000000 !important;
+	background: none !important;
+	text-decoration: underline !important;
+	text-decoration-color: rgba(232, 129, 39, 1) !important;
+}
+.homepage-reperio-gerarchia md-card.tutto-usi md-card-title:not(#featuredResultTitle), .homepage-reperio-gerarchia md-card.tutto-swisscovery md-card-title:not(#featuredResultTitle) {
+	padding-bottom: 0;
+}
+.homepage-reperio-gerarchia md-card.biblio-aam md-card-title:not(#featuredResultTitle), .homepage-reperio-gerarchia md-card.biblio-bul md-card-title:not(#featuredResultTitle) {
+	padding-bottom: 16px;
+}
+.homepage-reperio-scope {
+	text-align: center;
+	border: 1px dotted grey;
+}
