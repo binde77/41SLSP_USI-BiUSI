@@ -1,26 +1,32 @@
-<md-content>
-
+﻿<md-content>
     <div class="ps_content md-padding" layout-gt-sm="row" layout-align="start start">
-        <div flex="0" flex-md="0" flex-lg="20" flex-xl="25"></div>
-        <div flex-sm="100" flex-md="60" flex-lg="35" flex-xl="30" flex="100" layout="column">
-            <md-card class="cardbox default-card">
-                <md-card-title>
+        <div flex="0" flex-md="15" flex-lg="15" flex-xl="25"></div>
+        <div flex-sm="100" flex-md="24" flex-lg="25" flex-xl="15" flex="100" layout="column">
+
+            <!-- Benvenuti in reperio -->
+            <md-card class="cardbox default-card welcome-reperio" style="background: rgba(232, 129, 39, 1) !important;">
+                <md-card-title style="padding: 50px 16px;">
                     <md-card-title-text>
-                        <h1 class="md-headline">Willkommen bei <b>swisscovery</b></h1>
+                        <h1 class="md-headline">Wilkommen in <b>Reperio</b></h1>
+                        <h2 class="md-headline">Der USI Suchportal innerhalb <i>swisscovery</i></h2>
                     </md-card-title-text>
                 </md-card-title>
+            </md-card>
+        </div>
+        <div flex-sm="100" flex-md="46" flex-lg="45" flex-xl="35" flex="100" layout="column">
+            <md-card class="cardbox default-card welcome-reperio-text">
                 <md-card-content>
                     <p>
-                        Hier stehen Ihnen einfache und erweiterte Suchfunktionen f&uuml;r B&uuml;cher, E-Books, <a href="https://consortium.ch/lizenzen/" target="_blank">Zeitschriften</a>, <a href="https://consortium.ch/lizenzen/" target="_blank">Datenbanken</a> und weitere Medien zur Verf&uuml;gung.
+                        Hier stehen Ihnen einfache und erweiterte Suchfunktionen f&uuml;r B&uuml;cher, E-Books, Zeitschriften, Datenbanken und weitere Medien zur Verf&uuml;gung.
                    <br />
                         <br />
-                        Bitte <a href="#" target="_blank">loggen Sie sich ein</a> und profitieren Sie von unseren SLSP-Services, wie z. B.:
+                        Über <i>Reperio</i> können Sie die folgenden Dienste nutzen:
                     </p>
                     <ul>
-                        <li>Erhalten Sie Zugang zu &uuml;ber <a href="https://slsp.ch/libraries" target="_blank">450 wissenschaftlichen Bibliotheken</a> in der Schweiz</li>
-                        <li>Nutzen Sie von Ihrer Bibliothek lizenzierte E-Medien und erhalten Sie Zugang zu freien Titeln</li>
-                        <li>Bestellen Sie Artikel bei Bibliotheken, direkt oder via SLSP Courier</li>
-                        <li>Verwalten Sie Ihr Konto, Ihre Ausleihen und Ihre Vormerkungen</li>
+                        <li>Zugang zu &uuml;ber <a href="https://slsp.ch/libraries" target="_blank">450 wissenschaftlichen Bibliotheken</a> in der Schweiz</li>
+                        <li>Benutzung von Ihrer Bibliothek lizenzierte E-Medien und freien Titeln</li>
+                        <li>Bestellung von Dokumente bei Bibliotheken, direkt oder via SLSP-Courier</li>
+                        <li>Verwaltung von Ihrem Konto, Ihren Ausleihen und Ihren Vormerkungen</li>
                     </ul>
                     <br />
                     <p>
@@ -29,88 +35,114 @@
                         </b>
                     </p>
                     <p>
-                        Um ein SLSP-Nutzer zu werden, registrieren Sie sich bitte auf unserer <a href="https://registration.slsp.ch" target="_blank">Registrierungsplattform</a>.
+                        Um <i>Reperio</i> und die Dienstleistungen der Bibliotheken zu nutzen, registrieren Sie sich bitte auf der <a href="https://registration.slsp.ch/?iz=usi" target="_blank">Registrierungsplattform</a>.
                     </p>
                 </md-card-content>
             </md-card>
+        </div>
+        <div flex="0" flex-md="15" flex-lg="15" flex-xl="25"></div>
+    </div>
 
+    <div class="ps_content md-padding reperio-structure" layout-gt-sm="row" layout-align="start start">
+        <div flex="0" flex-md="10" flex-lg="15" flex-xl="25"></div>
+        <div flex-sm="100" flex-md="80" flex-lg="70" flex-xl="50" flex="100" layout="column">
+
+            <!-- Ambienti di ricerca -->
             <md-card class="cardbox default-card">
                 <md-card-title>
                     <md-card-title-text>
-                        <h2 class="md-headline">Search Scope</h2>
+                        <h2 class="md-headline"><b>Reperio</b> ist in verschiedenen Suchumgebungen organisiert</h2>
+                        <h3 class="md-headline"><b>Suchen Sie in:</b></h3>
                     </md-card-title-text>
                 </md-card-title>
                 <md-card-content>
-                    <img width="100%" src="custom/41SLSP_NETWORK-CENTRAL_PACKAGE/img/infographic_de.png" />
-                </md-card-content>
-            </md-card>
-        </div>
-        <div flex-sm="100" flex-md="40" flex-lg="20" flex-xl="20" flex="100" layout="column">
-            <md-card class="cardbox default-card">
-                <md-card-title>
-                    <md-card-title-text>
-                        <h2 class="md-headline">Library Search</h2>
-                    </md-card-title-text>
-                </md-card-title>
-                <md-card-content>
-                    <div class="resp-container">
-                        <iframe class="resp-iframe" src="https://tube.switch.ch/embed/bff2c4a6" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                <div class="ps_content md-padding homepage-reperio-gerarchia" layout-gt-sm="row" layout-align="start start">
+                    <div flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" flex="100" layout="column">
+                        <md-card class="cardbox default-card homepage-reperio-scope tutto-swisscovery">
+                            <md-card-title>
+                                <md-card-title-text>
+                                    <a href="javascript:window.open('/discovery/search?tab=41SLSP_USI_DN_and_CI&search_scope=DN_and_CI&vid=41SLSP_USI:BiUSI','_self')">Alle <i>swisscovery</i> Bibliotheken</a>
+                                </md-card-title-text>
+                            </md-card-title>
+                            <md-card-content>
+                            <div class="ps_content md-padding" layout-gt-sm="row" layout-align="start start">
+                                <div flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" flex="100" layout="column">
+                                <md-card class="cardbox default-card homepage-reperio-scope tutto-usi">
+                                    <md-card-title>
+                                        <md-card-title-text>
+                                            <a href="javascript:window.open('/discovery/search?tab=41SLSP_USI_MyInst_and_CI&search_scope=MyInst_MEGA&vid=41SLSP_USI:BiUSI','_self')">USI Bibliotheken</a>
+
+                                        </md-card-title-text>
+                                    </md-card-title>
+                                <div class="ps_content md-padding" layout-gt-sm="row" layout-align="start start">
+                                    <div flex-sm="100" flex-md="50" flex-lg="50" flex-xl="50" flex="100" layout="column">
+                                        <md-card class="cardbox default-card homepage-reperio-scope biblio-aam">
+                                            <md-card-title>
+                                                <md-card-title-text>
+                                                    <a href="javascript:window.open('/discovery/search?tab=USI_ARC_ONLY&search_scope=USI_ARC_ALL&vid=41SLSP_USI:BiUSI','_self')">Biblioteca<br />dell’Accademia<br />di architettura</a>
+                                                </md-card-title-text>
+                                            </md-card-title>
+                                        </md-card>
+                                    </div>
+                                    <div flex-sm="100" flex-md="50" flex-lg="50" flex-xl="50" flex="100" layout="column">
+                                        <md-card class="cardbox default-card homepage-reperio-scope biblio-bul">
+                                            <md-card-title>
+                                                <md-card-title-text>
+                                                    <a href="javascript:window.open('/discovery/search?tab=USI_BUL_ONLY&search_scope=USI_BUL_OPAC_RERO&vid=41SLSP_USI:BiUSI','_self')">Biblioteca<br />universitaria<br /> Lugano</a>
+                                                </md-card-title-text>
+                                            </md-card-title>
+                                        </md-card>
+                                    </div>
+                                </div>
+                                </md-card>
+                                </div>
+                            </div>
+                            </md-card-content>
+                        </md-card>
                     </div>
+                </div>
                 </md-card-content>
             </md-card>
-            <div flex-gt-sm="40" flex="100" layout="column">
-                <md-card class="cardbox default-card">
-                    <md-card-title>
-                        <md-card-title-text>
-                            <h2 class="md-headline">Fragen, Kommentare und Support</h2>
-                        </md-card-title-text>
-                    </md-card-title>
-                    <md-card-content>
-                        <p>
-                            Haben Sie Fragen oder m&ouml;chten Sie einen Kommentar anbringen? Haben Sie Probleme mit swisscovery? Dann <a href="mailto:?" target="_blank">kontaktieren Sie uns</a>! Wir freuen uns auf Ihre Nachricht.
-                        </p>
-                    </md-card-content>
-                </md-card>
-            </div>
         </div>
+        <div flex="0" flex-md="10" flex-lg="15" flex-xl="25"></div>
     </div>
 </md-content>
+
+<!-- Footer -->
 <md-content>
     <div flex="100">
         <md-card class="prm-primary-bg psfooter" flex layout-gt-sm="row" layout-align="space-around start">
             <md-card-content class="prm-primary-bg">
-                <span class="md-headline">Adresse:</span>
-                <p>&#91;Name der Institution / Bibliothek&#93;</p>
-                <p>&#91;Stra&szlig;enname und -nummer&#93;</p>
-                <p>&#91;Postleitzahl und Stadt&#93;</p>
+                <span class="md-headline">Über uns:</span>
+                <p><b>Biblioteche dell'USI</b></p>
+                <p>Università della Svizzera italiana</p>
             </md-card-content>
             <md-card-content class="prm-primary-bg">
                 <span class="md-headline">Kontakt:</span>
-		<p>&#91;phone number&#93;</p>
-                <p><a href="mailto:?">&#91;E-Mail-Adresse&#93;</a></p>
-                <p><a href="#" target="_blank">&#91;website&#93;</a></p>
-                <p>
+                <p><a href="mailto:info-BiUSI@usi.ch">info-BiUSI@usi.ch</a></p>
+                <!-- <p>
                     <md-button href="#" target="_blank" class="ps-button md-icon-button" aria-label="Youtube">
                         <md-icon class="ps_icon" md-svg-icon="custom/41SLSP_NETWORK-CENTRAL_PACKAGE/img/youtube.svg"></md-icon>
                     </md-button>
                     <md-button href="#" target="_blank" class="ps-button md-icon-button" aria-label="LinkedIn">
                         <md-icon class="ps_icon" md-svg-icon="custom/41SLSP_NETWORK-CENTRAL_PACKAGE/img/linkedin.svg"></md-icon>
                     </md-button>
-                </p>
+                </p> -->
             </md-card-content>
             <md-card-content class="prm-primary-bg">
                 <span class="md-headline">Beschreibung:</span>
                 <p>Diese Seite ist der Zugangspunkt zu den Ressourcen der</p>
-                <p><a class="ps_link" href="#" target="_blank">&#91;Name der Bibliothek / die folgenden Bibliotheken&#93;</a></p>
+                <p>Biblioteca dell'Accademia: <a href="http://biblio.arc.usi.ch/" target="_blank">biblio.arc.usi.ch</a></p>
+                <p>Biblioteca universitaria Lugano: <a href="https://www.bul.sbu.usi.ch/" target="_blank">bul.sbu.usi.ch</a></p>
             </md-card-content>
         </md-card>
         <md-card class="prm-primary-bg psfooter-legal" flex layout-gt-sm="row" layout-align-gt-sm="center start">
             <md-card-content class="prm-primary-bg" flex-gt-sm="70" layout-align-gt-sm="end">
-                <span class="legal">Der &#91;Name der Institution / Bibliothek/ies&#93; ist Mitglied der <a href="https://slsp.ch" target="_blank" class="ps_link">Swiss Library Service Platform (SLSP) network</a></span>
+                <span class="legal">Die Università della svizzera italiana (USI) ist Mitglied der <a href="https://slsp.ch" target="_blank" class="ps_link">Swiss Library Service Platform (SLSP) network</a></span>
             </md-card-content>
-            <md-card-content class="prm-primary-bg" flex-gt-sm="15" layout-align-gt-sm="end">
-                <a class="ps_link legal" href="https://slsp.ch/termsofuse" target="_blank">Rechtliche Informationen</a>
-            </md-card-content>
+            <!-- <md-card-content class="prm-primary-bg" flex-gt-sm="15" layout-align-gt-sm="end">
+                <a class="ps_link legal" href="https://slsp.ch/termsofuse" target="_blank">Informazioni legali</a>
+            </md-card-content> -->
             <md-card-content class="prm-primary-bg" flex-gt-sm="15" layout-align-gt-sm="end">
                 <a class="ps_link legal" href="https://slsp.ch/en/dataprotection" target="_blank">Datenschutz</a>
             </md-card-content>

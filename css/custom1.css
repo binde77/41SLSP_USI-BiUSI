@@ -376,6 +376,10 @@ a > h3:hover {
 /******************************************************************************/
 /******************************************************************************/
 
+/***************This entry is the mouse over background of the item expand button*****************/
+prm-location-items .md-button:focus:not([disabled]) {
+    background-color:#b5b5b5 !important;
+}
 
 /*****************This two entries are the background of the primary color*******************/
 
@@ -446,11 +450,14 @@ prm-logo .product-logo {
 
 /* Homepage */
 .ps_content a:hover {
-	background: none !important;
+	background-color: rgba(47, 47, 47, 0.1) !important;
 }
 .reperio-structure a {
 	color: rgba(232, 129, 39, 1) !important;
 	text-decoration-color: rgba(232, 129, 39, 1) !important;
+}
+.reperio-structure a:hover {
+	background: none !important;
 }
 .homepage-reperio-gerarchia md-card.default-card, .homepage-reperio-gerarchia prm-featured-result-item md-card {
 	font-size: 22px;
