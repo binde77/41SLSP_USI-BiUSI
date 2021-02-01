@@ -5,19 +5,17 @@
     // var app = angular.module('viewCustom', ['angularLoad']);
 
 
-    app.controller('CourierInfoController', [function () {
-        var vm = this;
+    // COMMENTATO IN ATTESA DI TARIFFE USI
+    // app.controller('CourierInfoController', [function () {
+    //     var vm = this;
 
-        vm.linkBase = "https:\/\/slsp.ch\/fees";
+    //     vm.linkBase = "https:\/\/slsp.ch\/fees";
 
 
-    }]);
+    // }]);
 
-    app.component('prmRequestAfter', {
-        bindings: { parentCtrl: '<' },
-        controller: 'CourierInfoController',
-        template: '<div layout="row" class="courier-info bar alert-bar layout-align-center-center layout-row" layout-align="center center"><span class="md-subhead"><a href="{{ $ctrl.linkBase }}" target="_blank"><span translate="customized.fulldisplay.fees"></span></a></span></div>'
-    });
+    // ELIMINATO, VIENE EREDITATO DA CENTRAL CUSTOMIZATION PACKAGE
+    // App.component“prmRequestAfter”
 
 
 
