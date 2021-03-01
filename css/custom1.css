@@ -482,3 +482,102 @@ prm-logo .product-logo {
 	text-align: center;
 	border: 1px dotted grey;
 }
+
+/* Full details */
+/* request button */
+prm-request-services button.md-button.button-as-link {
+	font-weight: 700;
+	border-radius: 5px;
+	padding: 0.4rem;
+	margin-left: 0;
+	background-color: #b5b5b5;
+}
+prm-request-services button.md-button.button-as-link:hover:not([disabled]) {
+	font-weight: 700;
+	border-radius: 5px;
+	padding: 0.4rem;
+	background-color: #121313 !important;
+	color: #ffffff !important;
+}
+/* request label */
+.full-view-section prm-request-services {
+	padding-top: 0.3rem;
+}
+.full-view-section prm-request-services h3.section-title {
+	display: none;
+	line-height: 1.6rem;
+}
+.full-view-section prm-request-services div.layout-row {
+	margin-bottom: 0.5rem;
+}
+.full-view-section prm-request-services md-divider.inner-divider {
+	display: none;
+}
+/* back-button */
+prm-opac prm-opac-back-button {
+	position: relative;
+	left: -14px;
+}
+
+/* items */
+prm-location-items > h3.section-title {
+	display: none;
+}
+prm-location-items .tab-content-header .md-title {
+	font-size: 1em;
+}
+prm-opac .section-title {
+	font-size: 1.05em;
+}
+.separate-list-items md-list-item .md-list-item-text h3 {
+	font-size: 14px;
+}
+/* library info link */
+prm-location-items-after .LibInfo a {
+	font-size: 14px;
+}
+prm-location-items-after .LibInfo img {
+	max-width: 20px;
+}
+/* item specific button */
+prm-location-items prm-service-button button.button-as-link, prm-location-items md-list prm-service-button .md-button.button-as-link {
+	font-weight: 700;
+	border-radius: 5px;
+	padding: 0.4rem 0.3rem;
+	margin-left: 0;
+	background-color: #b5b5b5;
+	font-size: 0.87rem;
+}
+prm-location-items prm-service-button button.md-button.button-as-link:hover:not([disabled]), prm-location-items md-list prm-service-button .md-button.button-as-link:hover:not([disabled]) {
+	font-weight: 700;
+	border-radius: 5px;
+	padding: 0.4rem 0.3rem;
+	margin-left: 0;
+	background-color: #121313 !important;
+	color: #ffffff !important;
+	font-size: 0.87rem;
+}
+/* item specific button mobile */
+primo-explore.__xs prm-location-items prm-service-button {
+	position: relative;
+	right: 3em;
+}
+
+/* other members top label*/
+prm-alma-other-members {
+	margin-top: 2rem;
+	display: block;
+	background-color: rgba(150,150,150,0.1);
+	padding: 0 12px;
+	position: relative;
+}
+prm-alma-other-members button#alma_other_members {
+	padding-left: 0;
+}
+prm-alma-other-members h3.medium-uppercase-bold {
+	font-family: standard_ct_lightlight, "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 20px;
+	letter-spacing: .005em;
+	font-weight: 300;
+	text-transform: none;
+}
