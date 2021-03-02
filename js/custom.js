@@ -85,6 +85,8 @@
 
         vm.isMeaa = isMeaa;
         vm.isSameDay = isSameDay;
+        vm.isLabisalp = isLabisalp;
+        vm.isCattedre = isCattedre;
 
         function isMeaa() {
             if (vm.parentCtrl.loc.location.libraryCode == 'MEAA') {
@@ -100,12 +102,28 @@
             }
             return false;
         }
+
+        function isLabisalp() {
+        		var labisalpLocation = vm.parentCtrl.loc.location.subLocationCode;
+            if (labisalpLocation == '820') {
+                return true;
+            }
+            return false;
+        }
+
+        function isCattedre() {
+        		var cattedreLocation = vm.parentCtrl.loc.location.subLocationCode;
+            if (cattedreLocation == '845') {
+                return true;
+            }
+            return false;
+        }
     }]);
 
     app.component('prmLocationItemAfter', {
         bindings: {parentCtrl: '<'},
         controller: 'ItemCommentComponentController',
-        template: '<span style="padding: 10px; font-size: 0.9em; color: red; display: flex; max-width: 200px;" ng-if="$ctrl.isMeaa() && $ctrl.isSameDay()"><span translate="customized.arc.sameday"></span></span>'
+        template: '<span style="padding: 10px; font-size: 0.9em; color: red; display: flex; max-width: 200px;" ng-if="$ctrl.isLabisalp()"><span translate="customized.arc.labisalp"></span></span><span style="padding: 10px; font-size: 0.9em; color: red; display: flex; max-width: 200px;" ng-if="$ctrl.isCattedre()"><span translate="customized.arc.cattedre"></span></span><span style="padding: 10px; font-size: 0.9em; color: red; display: flex; max-width: 200px;" ng-if="$ctrl.isMeaa() && $ctrl.isSameDay()"><span translate="customized.arc.sameday"></span></span>'
     });
 
 
