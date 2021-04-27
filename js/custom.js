@@ -155,8 +155,6 @@
         vm.isCattedre = isCattedre;
         vm.isBtm = isBtm;
 
-        // this.tester = $element[0].parentElement;
-        // console.log(this.tester.children[0].children[0].children[0].children[0]);
         function slamIt() {
 			this.tester = $element[0].parentElement;
 	        var policy = this.tester.children[0].children[0].children[0].children[1].innerText;
@@ -210,5 +208,5 @@
         controller: 'ItemCommentComponentController',
         template: '<span style="padding: 10px; font-size: 0.9em; color: red; display: flex; max-width: 200px;" ng-if="$ctrl.isLabisalp()"><span translate="customized.arc.labisalp"></span></span><span style="padding: 10px; font-size: 0.9em; color: red; display: flex; max-width: 200px;" ng-if="$ctrl.isCattedre()"><span translate="customized.arc.cattedre"></span></span><span style="padding: 10px; font-size: 0.9em; color: red; display: flex; max-width: 200px; display: flex !important; flex-direction: column;" ng-if="$ctrl.isMeaa() && $ctrl.isBtm()"><span translate="customized.arc.btm"></span> <a style="color: red; text-decoration: underline solid red;" href="http://www.arc.usi.ch/it/btm" target="_blank">http://www.arc.usi.ch/it/btm</a></span>'
     });
-    // <span style="padding: 10px; font-size: 0.9em; color: red; display: flex; max-width: 200px;" ng-if="$ctrl.isMeaa() && $ctrl.isSameDay()"><span translate="customized.arc.sameday"></span></span>
+
 })();
