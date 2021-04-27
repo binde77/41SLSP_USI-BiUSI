@@ -1,51 +1,52 @@
 /***************  Testing fonts  ******************/
 @font-face {
-	font-family: 'standard_ct_lightlight';
-	src: url('standardct_light_macroman/standard-light-webfont.eot');
-	src: url('standardct_light_macroman/standard-light-webfont.eot?#iefix') format('embedded-opentype'),
-	url('standardct_light_macroman/standard-light-webfont.woff2') format('woff2'),
-	url('standardct_light_macroman/standard-light-webfont.woff') format('woff'),
-	url('standardct_light_macroman/standard-light-webfont.ttf') format('truetype'),
-	url('standardct_light_macroman/standard-light-webfont.svg#standard_ct_lightlight') format('svg');
+    font-family: 'standard_ct_lightlight';
+    src: url('standardct_light_macroman/standard-light-webfont.eot');
+    src: url('standardct_light_macroman/standard-light-webfont.eot?#iefix') format('embedded-opentype'),
+    url('standardct_light_macroman/standard-light-webfont.woff2') format('woff2'),
+    url('standardct_light_macroman/standard-light-webfont.woff') format('woff'),
+    url('standardct_light_macroman/standard-light-webfont.ttf') format('truetype'),
+    url('standardct_light_macroman/standard-light-webfont.svg#standard_ct_lightlight') format('svg');
 }
 @font-face {
-	font-family: 'standard_ct_medium';
-	src: url('standardct_medium_macroman/standard-medium-webfont.eot');
-	src: url('standardct_medium_macroman/standard-medium-webfont.eot?#iefix') format('embedded-opentype'),
-	url('standardct_medium_macroman/standard-medium-webfont.woff2') format('woff2'),
-	url('standardct_medium_macroman/standard-medium-webfont.woff') format('woff'),
-	url('standardct_medium_macroman/standard-medium-webfont.ttf') format('truetype'),
-	url('standardct_medium_macroman/standard-medium-webfont.svg#standard_ct_lightlight') format('svg');
+    font-family: 'standard_ct_medium';
+    src: url('standardct_medium_macroman/standard-medium-webfont.eot');
+    src: url('standardct_medium_macroman/standard-medium-webfont.eot?#iefix') format('embedded-opentype'),
+    url('standardct_medium_macroman/standard-medium-webfont.woff2') format('woff2'),
+    url('standardct_medium_macroman/standard-medium-webfont.woff') format('woff'),
+    url('standardct_medium_macroman/standard-medium-webfont.ttf') format('truetype'),
+    url('standardct_medium_macroman/standard-medium-webfont.svg#standard_ct_lightlight') format('svg');
 }
 /* STANDARD LIGHT */
 body {
-	font-family: 'standard_ct_lightlight', Source Sans Pro, Helvetica Neue, Helvetica, Arial, sans-serif;
-	color: rgb(0,0,0);
+    font-family: 'standard_ct_lightlight', Source Sans Pro, Helvetica Neue, Helvetica, Arial, sans-serif;
+    color: rgb(0,0,0);
 }
 /* Facets: facet value; */
 .available-facets .section-content .md-chips .md-chip strong span{
-	font-family: 'standard_ct_lightlight', Source Sans Pro, Helvetica Neue, Helvetica, Arial, sans-serif;
-	font-weight: 100;
+    font-family: 'standard_ct_lightlight', Source Sans Pro, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-weight: 100;
 }
 
 /* STANDARD MEDIUM */
 /* Brief results: document title  */
 prm-brief-result .item-title {
-	font-family: 'standard_ct_medium', 'standard_ct_lightlight', Source Sans Pro, Helvetica Neue, Helvetica, Arial, sans-serif;
-	font-weight: 100;
+    font-family: 'standard_ct_medium', 'standard_ct_lightlight', Source Sans Pro, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-weight: 100;
 }
 /* Facets: facets label; */
 .section-title-header, .sidebar-header {
-	font-family: 'standard_ct_medium', 'standard_ct_lightlight', Source Sans Pro, Helvetica Neue, Helvetica, Arial, sans-serif;
-	font-weight: 100;
-	font-size: 1.17em;
+    font-family: 'standard_ct_medium', 'standard_ct_lightlight', Source Sans Pro, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    font-size: 1.17em;
 }
 /* Availability */
 prm-search-result-availability-line {
-	font-family: 'standard_ct_medium', 'standard_ct_lightlight', Source Sans Pro, Helvetica Neue, Helvetica, Arial, sans-serif;
-	font-weight: 100;
-	font-size: 14px;
+    font-family: 'standard_ct_medium', 'standard_ct_lightlight', Source Sans Pro, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    font-size: 14px;
 }
+
 
 
 
@@ -68,7 +69,10 @@ prm-search-result-availability-line {
 }
     /*hover effect Navigation and buttons*/
     #mainMenu > div > a:hover, button#signInBtn:hover, prm-topbar > div > prm-user-area-expandable > md-menu > button:hover, button#more-links-button:hover,
-    prm-search-bookmark-filter > a:hover, a#favorites-button:hover, a#search-button:hover, .md-button.button-as-link:hover:not([disabled]), .md-button.button-link:hover:not([disabled]), .md-button.button-link:focus:not([disabled]) {
+    prm-search-bookmark-filter > a:hover, a#favorites-button:hover, a#search-button:hover, .md-button.button-as-link:hover:not([disabled]),
+    .md-button.button-link:hover:not([disabled]), .md-button.button-link:focus:not([disabled]), prm-user-area-expandable .button-with-menu-arrow:hover .menu-arrow:hover:not([disabled]),
+    button.item-expand-button.md-button.md-primoExplore-theme.md-ink-ripple:hover:not([disabled]),
+    button.item-expand-button.md-button.md-primoExplore-theme.md-ink-ripple:focus:not([disabled]) {
         background-color: #ddd !important;
         color: #111 !important;
     }
@@ -100,12 +104,15 @@ button.switch-to-advanced.zero-margin.button-with-icon.md-button.md-primoExplore
     border-width: 1px;
     border-radius: 5px;
 }
-.md-button.button-confirm {
-    border: 1px solid #ffffff;
+
+.md-button.button-as-link {
+    line-height: 36px;
+    padding: 0 12px;
 }
-.md-button.md-primary:hover:not([disabled]), .md-button.md-primary:focus:not([disabled]), prm-favorites-labels.md-chips.md-chip.toggleable-chip:not(.chip-toggled-on).md-chip-content:hover:not([disabled]), prm-favorites-labels.md-chips.md-chip:not(.chip-toggled-on).md-chip-content:hover:not([disabled]), .barprm-authentication.md-button:hover:not([disabled]), button.dismiss-alert-button:hover{
-	color: #fff;
-	background-color:#111;
+
+.md-button.md-primary:hover:not([disabled]), .md-button.md-primary:focus:not([disabled]), prm-favorites-labels .md-chips .md-chip.toggleable-chip:not(.chip-toggled-on) .md-chip-content:hover:not([disabled]), prm-favorites-labels .md-chips .md-chip:not(.chip-toggled-on) .md-chip-content:hover:not([disabled]), .bar prm-authentication .md-button:hover:not([disabled]), button.dismiss-alert-button:hover {
+    color: #fff;
+    background-color: #111;
 }
 
 /*the main color border on mobile view*/
@@ -115,6 +122,17 @@ button.switch-to-advanced.zero-margin.button-with-icon.md-button.md-primoExplore
         border-bottom-width: 8px;
     }
 }
+
+.md-button.button-as-link {
+    line-height: 36px;
+    padding: 0 6px;
+}
+
+.md-autocomplete-suggestions li {
+    white-space: nowrap;
+}
+
+
 /***************  Main Content  ******************/
 
 /*backgound of the Textboxes Homepage*/
@@ -149,6 +167,7 @@ prm-search > div > md-content, md-card.default-card._md.md-primoExplore-theme {
 md-card-content a, prm-service-details a {
     color: #222222 !important;
 }
+
 md-card-content a, prm-service-details a, div.courier-info > span a {
     text-decoration: underline !important;
 }
@@ -195,7 +214,7 @@ md-icon.ps_icon, a.ps_link {
     text-decoration: underline;
 }
 
-    /*md-icon.ps_icon:hover, a.ps_link:hover, a.ps_link.legal:hover, span.legal a:hover {
+	/*md-icon.ps_icon:hover, a.ps_link:hover, a.ps_link.legal:hover, span.legal a:hover {
         background-color: rgba(61,110,148,.1) !important;
     }*/
 
@@ -288,9 +307,8 @@ div.custom-links-container.layout-wrap.layout-align-sm-start-start.layout-align-
 
 /*Facet titles*/
 span.section-title-header:hover {
-	color: #8a8a8a !important;
+    color: #8a8a8a !important;
 }
-
 /*underlined search results*/
 /*.text-highlight, mark {
     box-shadow: inset 0 -0.15em 0 0 #8dd8d8;
@@ -309,9 +327,32 @@ span.section-title-header:hover {
     margin-bottom: .8em !important;
 }
 
+/*View Results Journals - Item Details*/
+prm-location-items .md-list-item-text.layout-wrap.layout-row.flex {
+    flex-direction: column;
+}
+prm-location-items h3, prm-location-items h4 {
+    margin:10px 0 !important;
+}
+prm-location-items > md-list > md-list-item > div > div.md-list-item-text > div.weak-text > div > div > p {
+    margin: 4px 18px !important;
+    display: list-item;
+}
+prm-location-items > md-list > md-list-item > div > div > div.layout-wrap {
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    max-width: 100% !important;
+}
+prm-location-items > md-list > md-list-item > div > div > div > div > prm-service-button > button {
+    box-shadow: inset 0 -0.15em 0 0 #8dd8d8;
+}
+
+/* Hide "search inside" for print journals */
+.search-within-p-only { display:none }
+
 /*fullview background of the left part*/
 .md-dialog-container.fixed-container {
-	background-color: #444 !important;
+    background-color: #444 !important;
 }
 
 /*background color of the signin window and the fullscreen navigation*/
@@ -319,29 +360,231 @@ md-backdrop._md-dialog-backdrop.md-opaque.md-primoExplore-theme {
     background-color: #1f1f1f !important;
 }
 /*text color of the signin window and the fullscreen navigation*/
-prm-main-menu[menu-type=full] .md-button .md-headline, prm-main-menu[menu-type=full] .overlay-menu-item .md-headline, .light-on-dark-dialog .md-button.button-as-link, .light-on-dark-dialog .md-button.button-confirm {
+prm-main-menu[menu-type=full] .md-button .md-headline, prm-main-menu[menu-type=full] .overlay-menu-item .md-headline, .light-on-dark-dialog .md-button.button-as-link, .light-on-dark-dialog .md-button.button-confirm, md-dialog.light-on-dark-dialog md-list md-list-item.list-login .md-button {
     color: #fff !important;
 }
 /*hiding the Library Logo in the login window*/
 .login-header {
-    display: none;
+    display: none !important;
 }
 /*alertbar for the courier info*/
+
 .courier-info {
     margin: 0px 8px;
 }
+
+.courier-info.bar.alert-bar {
+	height: unset;
+	margin: 6px 8px;
+	padding: .5em .5em 0.25em;
+	text-align: center;
+}
+
 /*Library info icon*/
 prm-location-items-after > div > span > a > img {
     vertical-align: middle;
     max-width: 30px;
     margin: 4px 12px;
 }
+
 /*Library card Personal details display*/
-#personalDetails>md-card-content>div {
-	flex-flow: column;
+#personalDetails > md-card-content > div {
+    flex-flow: column;
 }
-#prm_contact\.address_1 {
-	width: 400px;
+
+#personalDetails .md-input-has-value.layout-column {
+    min-width: 400px;
+}
+
+prm-personal-info-after {
+    display: flex;
+}
+
+/*Full view Resource sharing */
+
+#getit_link1_0 > div > prm-full-view-service-container > div.section-body > div {
+    display: flex;
+    flex-direction: column;
+}
+
+prm-opac {
+    order: 1;
+}
+
+prm-alma-other-members {
+    order: 2;
+    display: grid;
+}
+
+alma-htgi-svc {
+    order: 3;
+}
+
+primo-explore.logged-out alma-htgi-svc, primo-explore.alert alma-htgi-svc {
+    order: 0 !important;
+}
+
+.medium-uppercase-bold {
+    text-transform: none;
+    font-size: 1em;
+}
+
+/*Full view Resource sharing expand section*/
+
+prm-alma-other-units button.layout-fill, prm-alma-other-members button.layout-fill {
+     height: auto;
+     min-height: auto;
+}
+
+/* Full view change sections order */
+
+#full-view-container >*:first-child {
+	display: flex;
+	flex-direction: column;
+}
+
+#brief {
+	order: 0 !important;
+}
+
+#details {
+	order: 3 !important;
+}
+
+#links {
+	order: 4 !important;
+}
+
+#getit_link1_0 {
+	order: 1 !important;
+}
+
+#action_list {
+	order: 2 !important;
+}
+
+#virtualBrowse {
+	order: 5 !important;
+}
+
+/* Change of links in left navigation bar ENG */
+
+[aria-label="Top"] {
+	order: 0 !important;
+}
+
+[aria-label="Details"] {
+	order: 4 !important;
+}
+
+[aria-label="Links"] {
+	order: 5 !important;
+}
+
+[aria-label="Loan and request options"] {
+	order: 1 !important;
+}
+
+[aria-label="Send to"] {
+	order: 3 !important;
+}
+
+[aria-label="Virtual Browse"] {
+	order: 6 !important;
+}
+
+[aria-label="View Online"] {
+	order: 2 !important;
+}
+
+/* Change of links in left navigation bar GER */
+
+[aria-label="Top"] {
+	order: 0 !important;
+}
+
+[aria-label="Details"] {
+	order: 4 !important;
+}
+
+[aria-label="Links"] {
+	order: 5 !important;
+}
+
+[aria-label="Ausleih- und Bestelloptionen"] {
+	order: 1 !important;
+}
+
+[aria-label="Senden an"] {
+	order: 3 !important;
+}
+
+[aria-label="Virtuelles Regal"] {
+	order: 6 !important;
+}
+
+[aria-label="Online ansehen"] {
+	order: 2 !important;
+}
+
+/* Change of links in left navigation bar FRE */
+
+[aria-label="Haut"] {
+	order: 0 !important;
+}
+
+[aria-label="D&#233;tails"] {
+	order: 4 !important;
+}
+
+[aria-label="Liens"] {
+	order: 5 !important;
+}
+
+[aria-label="Options de pr&#234;t et de demande"] {
+	order: 1 !important;
+}
+
+[aria-label="Envoyer vers"] {
+	order: 3 !important;
+}
+
+[aria-label="Etag&#232;re virtuelle"] {
+	order: 6 !important;
+}
+
+[aria-label="Consulter en ligne"] {
+	order: 2 !important;
+}
+
+/* Change of links in left navigation bar ITA */
+
+[aria-label="Top"] {
+	order: 0 !important;
+}
+
+[aria-label="Dettagli"] {
+	order: 4 !important;
+}
+
+[aria-label="Link"] {
+	order: 5 !important;
+}
+
+[aria-label="Opzioni di prestito e richiesta"]{
+	order: 1 !important;
+}
+
+[aria-label="Invia a"] {
+	order: 3 !important;
+}
+
+[aria-label="Scorri virtualmente"] {
+	order: 5 !important;
+}
+
+[aria-label="Visualizza online"] {
+	order: 2 !important;
 }
 
 /******************************************************************************/
@@ -368,6 +611,7 @@ a > h3:hover {
     background-color: #eee !important;
 }
 
+
 /******************************************************************************/
 /******************************************************************************/
 /******************************************************************************/
@@ -376,16 +620,25 @@ a > h3:hover {
 /******************************************************************************/
 /******************************************************************************/
 
-/***************This entry is the mouse over background of the item expand button*****************/
-prm-location-items .md-button:focus:not([disabled]) {
-    background-color:#b5b5b5 !important;
-}
+/******************************************************************************/
+/******************************************************************************/
+/******************************************************************************/
+/********************** Start of the Local Package CSS ************************/
+/******************************************************************************/
+/******************************************************************************/
+/******************************************************************************/
+
+
+/******************************************************************************/
+/********************** Primary colour ****************************************/
+/******************************************************************************/
+
 
 /*****************This two entries are the background of the primary color*******************/
-
 .prm-primary-bg, prm-atoz-search-bar, prm-browse-search-bar, prm-collection-gallery-header .collection-header-inner, prm-search-bar, prm-newspapers-search-bar,
-prm-spinner.overlay-cover.light-on-dark:after, prm-tags-search-bar, prm-tree-nav prm-spinner .diamond, .prm-primary-bg,
-md-checkbox.md-checked ._md-icon, md-tabs md-ink-bar, md-radio-button.md-checked ._md-on, button.switch-to-simple, .md-button.button-confirm {
+prm-spinner.overlay-cover.light-on-dark:after, prm-tags-search-bar, prm-tree-nav prm-spinner .diamond, .prm-primary-bg, md-checkbox.md-checked .md-icon,
+md-tabs md-ink-bar, md-radio-button.md-checked .md-on, button.switch-to-simple, .md-button.button-confirm,
+prm-request-services .md-button.button-as-link, md-tabs.tabs-as-app .back-button {
     background-color: #b5b5b5 !important;
 }
 
@@ -396,188 +649,251 @@ md-checkbox.md-checked ._md-icon, md-tabs md-ink-bar, md-radio-button.md-checked
 }
 
 
-
-/*****************This entry is the mouse over background of the links and buttons*******************/
+/*****************This entry is the mouse over background of the links and buttons (primary-color)*******************/
 md-card.prm-primary-bg.psfooter > md-card-content a:hover, md-icon.ps_icon:hover, a.ps_link:hover, a.ps_link.legal:hover, span.legal a:hover, button.switch-to-advanced:hover,
-button.switch-to-simple:hover, .md-button.button-confirm:hover {
-    /* background-color: #83dcd0 !important; */
+button.switch-to-simple:hover, .md-button.button-confirm:hover, md-tabs.tabs-as-app .back-button:hover:not([disabled]), .md-button.button-as-link:hover:not([disabled]) {
     background-color: #121313 !important;
     color: #ffffff !important;
 }
 
 
-
-
 /*****************This two entries are the font color of the primary color*******************/
-
-    .prm-primary-bg, prm-atoz-search-bar, prm-browse-search-bar, prm-collection-gallery-header .collection-header-inner, prm-newspapers-search-bar,
-    prm-spinner.overlay-cover.light-on-dark:after, prm-tags-search-bar, prm-tree-nav prm-spinner .diamond, .prm-primary-bg, .md-button.switch-to-advanced, button.switch-to-simple,
-    span.legal, span.legal > a, a.ps_link.legal, .ps_icon, md-card.prm-primary-bg.psfooter > md-card-content a, md-checkbox.md-checked ._md-icon, .md-button.button-confirm {
-        color: #121313 !important;
-    }
+.prm-primary-bg, prm-atoz-search-bar, prm-browse-search-bar, prm-collection-gallery-header .collection-header-inner, prm-newspapers-search-bar,
+prm-spinner.overlay-cover.light-on-dark:after, prm-tags-search-bar, prm-tree-nav prm-spinner .diamond, .prm-primary-bg, md-checkbox.md-checked .md-icon:after, .md-button.switch-to-advanced, button.switch-to-simple,
+span.legal, span.legal > a, a.ps_link.legal, .ps_icon, md-card.prm-primary-bg.psfooter > md-card-content a, .md-button.button-confirm,
+md-tabs.tabs-as-app .back-button, prm-request-services .md-button.button-as-link {
+    color: #121313 !important;
+}
 
 button.switch-to-advanced.zero-margin.button-with-icon.md-button.md-primoExplore-theme.md-ink-ripple {
     border-color: #121313 !important;
 }
 
-
+/******************************************************************************/
+/********************** Secondary colour **************************************/
+/******************************************************************************/
 
 /*****************This two entries are the background of the secondary color*******************/
-
 .bar.alert-bar, .classic-input .search-scope, .prm-alert-bg {
     background-color: #e88127 !important;
 }
 
-.text-highlight, mark {
+.text-highlight, mark, prm-location-items > md-list > md-list-item > div > div > div > div > prm-service-button > button {
     box-shadow: inset 0 -0.15em 0 0 #e88127;
 }
 
 
-/*****************This entry is the font color of the secondary color*******************/
+/*****************This entry is the mouse over background of the links and buttons (secondary-color)*******************/
+/*.bar prm-authentication .md-button:hover:not([disabled]),*/
+div.alert-bar .md-button:hover:not([disabled]) {
+    background-color: #111;
+}
 
+
+/*****************This entry is the font color of the secondary color*******************/
 .bar.alert-bar, .classic-input .search-scope, .prm-alert-bg, .bar prm-authentication .md-button, button.dismiss-alert-button, div.courier-info > span a {
     color: #ffffff !important;
     font-weight: 700;
 }
 
+/******************************************************************************/
+/******************************************************************************/
+/******************************************************************************/
+/********************** End of the Local Package CSS ************************/
+/******************************************************************************/
+/******************************************************************************/
+/******************************************************************************/
 
-/* USI REPERIO STYLING */
+
+/******************************************************************************/
+/******************************************************************************/
+/******************************************************************************/
+/********************** Start of USI Reperio styling **************************/
+/******************************************************************************/
+/******************************************************************************/
+/******************************************************************************/
 
 /* Logo wide */
 prm-logo .product-logo {
-	padding: 0.6em;
+    padding: 0.6em;
 }
 
 /* Homepage */
 .ps_content a:hover {
-	background-color: rgba(47, 47, 47, 0.1) !important;
+    background-color: rgba(47, 47, 47, 0.1) !important;
 }
 .reperio-structure a {
-	color: rgba(232, 129, 39, 1) !important;
-	text-decoration-color: rgba(232, 129, 39, 1) !important;
+    color: rgba(232, 129, 39, 1) !important;
+    text-decoration-color: rgba(232, 129, 39, 1) !important;
 }
 .reperio-structure a:hover {
-	background: none !important;
+    background: none !important;
 }
 .homepage-reperio-gerarchia md-card.default-card, .homepage-reperio-gerarchia prm-featured-result-item md-card {
-	font-size: 22px;
-	font-weight: 600;
+    font-size: 22px;
+    font-weight: 600;
 }
 .homepage-reperio-gerarchia md-card.default-card a, .homepage-reperio-gerarchia prm-featured-result-item md-card a {
-	text-decoration: none !important;
+    text-decoration: none !important;
 }
 .homepage-reperio-gerarchia md-card.default-card a:hover, .homepage-reperio-gerarchia prm-featured-result-item md-card a:hover {
-	color: #000000 !important;
-	background: none !important;
-	text-decoration: underline !important;
-	text-decoration-color: rgba(232, 129, 39, 1) !important;
+    color: #000000 !important;
+    background: none !important;
+    text-decoration: underline !important;
+    text-decoration-color: rgba(232, 129, 39, 1) !important;
 }
 .homepage-reperio-gerarchia md-card.tutto-usi md-card-title:not(#featuredResultTitle), .homepage-reperio-gerarchia md-card.tutto-swisscovery md-card-title:not(#featuredResultTitle) {
-	padding-bottom: 0;
+    padding-bottom: 0;
 }
 .homepage-reperio-gerarchia md-card.biblio-aam md-card-title:not(#featuredResultTitle), .homepage-reperio-gerarchia md-card.biblio-bul md-card-title:not(#featuredResultTitle) {
-	padding-bottom: 16px;
+    padding-bottom: 16px;
 }
 .homepage-reperio-scope {
-	text-align: center;
-	border: 1px dotted grey;
+    text-align: center;
+    border: 1px dotted grey;
 }
 
 /* Full details */
 /* request button */
 prm-request-services button.md-button.button-as-link {
-	font-weight: 700;
-	border-radius: 5px;
-	padding: 0.4rem;
-	margin-left: 0;
-	background-color: #b5b5b5;
+    font-weight: 700;
+    border-radius: 5px;
+    padding: 0 0.4rem;
+    margin-left: 0;
+    background-color: #b5b5b5 !important;
+    color: inherit !important;
+}
+prm-request-services .md-button.button-as-link {
+    color: inherit !important;
 }
 prm-request-services button.md-button.button-as-link:hover:not([disabled]) {
-	font-weight: 700;
-	border-radius: 5px;
-	padding: 0.4rem;
-	background-color: #121313 !important;
-	color: #ffffff !important;
+    font-weight: 700;
+    border-radius: 5px;
+    padding: 0 0.4rem;
+    background-color: #121313 !important;
+    color: #ffffff !important;
 }
 /* request label */
 .full-view-section prm-request-services {
-	padding-top: 0.3rem;
+    padding-top: 0.3rem;
 }
 .full-view-section prm-request-services h3.section-title {
-	display: none;
-	line-height: 1.6rem;
+    display: none;
+    line-height: 1.6rem;
 }
 .full-view-section prm-request-services div.layout-row {
-	margin-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 .full-view-section prm-request-services md-divider.inner-divider {
-	display: none;
+    display: none;
 }
 /* back-button */
 prm-opac prm-opac-back-button {
-	position: relative;
-	left: -14px;
+    position: relative;
+    left: -14px;
+}
+md-tabs.tabs-as-app .back-button {
+    color: #3d6e94 !important;
+    background-color: inherit !important;
+}
+md-tabs.tabs-as-app .back-button:hover:not([disabled]) {
+    background-color: inherit !important;
+    color: #222 !important;
 }
 
 /* items */
+prm-location-items h3, prm-location-items h4 {
+    margin: 0 !important;
+}
 prm-location-items > h3.section-title {
-	display: none;
+    display: none;
 }
 prm-location-items .tab-content-header .md-title {
-	font-size: 1em;
+    font-size: 1em;
 }
 prm-opac .section-title {
-	font-size: 1.05em;
+    font-size: 1.05em;
 }
 .separate-list-items md-list-item .md-list-item-text h3 {
-	font-size: 14px;
+    font-size: 14px;
 }
+/* items - red policy message */
+prm-location-item-after {
+    margin: auto 0;
+}
+prm-location-item-after .policy-message-red {
+    display: block;
+    color: red;
+    font-size: 14px;
+    max-width: 9em;
+}
+
 /* library info link */
 prm-location-items-after .LibInfo a {
-	font-size: 14px;
+    font-size: 14px;
 }
 prm-location-items-after .LibInfo img {
-	max-width: 20px;
+    max-width: 20px;
 }
 /* item specific button */
 prm-location-items prm-service-button button.button-as-link, prm-location-items md-list prm-service-button .md-button.button-as-link {
-	font-weight: 700;
-	border-radius: 5px;
-	padding: 0.4rem 0.3rem;
-	margin-left: 0;
-	background-color: #b5b5b5;
-	font-size: 0.87rem;
+    font-weight: 700;
+    border-radius: 5px;
+    padding: 0 0.4rem;
+    margin-left: 0;
+    background-color: #b5b5b5;
+    font-size: 0.87rem;
 }
 prm-location-items prm-service-button button.md-button.button-as-link:hover:not([disabled]), prm-location-items md-list prm-service-button .md-button.button-as-link:hover:not([disabled]) {
-	font-weight: 700;
-	border-radius: 5px;
-	padding: 0.4rem 0.3rem;
-	margin-left: 0;
-	background-color: #121313 !important;
-	color: #ffffff !important;
-	font-size: 0.87rem;
+    font-weight: 700;
+    border-radius: 5px;
+    padding: 0 0.4rem;
+    margin-left: 0;
+    background-color: #121313 !important;
+    color: #ffffff !important;
+    font-size: 0.87rem;
+}
+prm-location-items > md-list > md-list-item > div > div > div > div > prm-service-button > button {
+    box-shadow: none;
 }
 /* item specific button mobile */
 primo-explore.__xs prm-location-items prm-service-button {
-	position: relative;
-	right: 3em;
+    position: relative;
+    right: 3em;
 }
 
 /* other members top label*/
 prm-alma-other-members {
-	margin-top: 2rem;
-	display: block;
-	background-color: rgba(150,150,150,0.1);
-	padding: 0 12px;
-	position: relative;
+    margin-top: 2rem;
+    display: block;
+    background-color: rgba(150,150,150,0.1);
+    padding: 0 12px;
+    position: relative;
 }
 prm-alma-other-members button#alma_other_members {
-	padding-left: 0;
+    padding-left: 0;
 }
 prm-alma-other-members h3.medium-uppercase-bold {
-	font-family: standard_ct_lightlight, "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size: 20px;
-	letter-spacing: .005em;
-	font-weight: 300;
-	text-transform: none;
+    font-family: standard_ct_lightlight, "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    letter-spacing: .005em;
+    font-weight: 300;
+    text-transform: none;
+}
+
+/* new fees information box */
+prm-request div.courier-info.bar.alert-bar {
+    background-color: #9696961a !important;
+    border: 1px solid #b1afaf !important;
+    padding: 1em 0 0.5em;
+    margin: 1.5em 0;
+    font-size: 15px;
+}
+prm-request div.courier-info.bar.alert-bar > h4 {
+    color: #3a3a3a;
+    font-weight: 700;
+}
+prm-request div.courier-info.bar.alert-bar > p {
+    color: #3a3a3a;
+    font-weight: 500;
 }
