@@ -1,13 +1,12 @@
 (function () {
 
-    var app = angular.module('viewCustom', ['angularLoad']);
+	var app = angular.module('viewCustom', ['angularLoad']);
 
 	//--------Fees messages ---------------------------------------
 
-   app.controller('CourierInfoController', ['$element', function ($element) {
+	app.controller('CourierInfoController', ['$element', function ($element) {
 
 		//shortcut for convenience
-
 		this.form = $element[0].parentElement;
 
 		//function for inserting block
@@ -84,7 +83,7 @@
     app.component('prmLocationItemsAfter', {
         bindings: { parentCtrl: '<' },
         controller: 'LibInfoController',
-        template: '<div layout="row" class="LibInfo" layout-align="start center"><span class="md-subhead"><a ng-href="{{ $ctrl.biblinkBase() }}" style="{{ $ctrl.biblinkStyle() }}" target="_blank"><img width="35px" ng-src="/discovery/custom/41SLSP_USI-BiUSITEST/img/information.png" />{{ $ctrl.getLibrary() }}</a></span></div>'
+        template: '<div layout="row" class="LibInfo" layout-align="start center"><span class="md-subhead"><a ng-href="{{ $ctrl.biblinkBase() }}" style="{{ $ctrl.biblinkStyle() }}" target="_blank"><img width="35px" ng-src="/discovery/custom/41SLSP_USI-BiUSI/img/information.png" />{{ $ctrl.getLibrary() }}</a></span></div>'
     });
 
 
@@ -146,7 +145,7 @@
     });
 
 
-    // -------- BiUSI - Insert customized text per items from MEAA and policy 65 - Same day loan -----------------
+    // -------- BiUSI - Insert customized texts for items from MEAA -----------------
     app.controller('ItemCommentComponentController', ['$element', function ($element) {
         var vm = this;
         vm.isMeaa = isMeaa;
@@ -154,19 +153,20 @@
         vm.isLabisalp = isLabisalp;
         vm.isCattedre = isCattedre;
         vm.isBtm = isBtm;
+        vm.isVercGubl = isVercGubl;
 
-        function slamIt() {
-			this.tester = $element[0].parentElement;
-	        var policy = this.tester.children[0].children[0].children[0].children[1].innerText;
+        function setSamedaypolicywarning() {
+			this.requestafter = $element[0].parentElement;
+	        var policy = this.requestafter.children[0].children[0].children[0].children[1].innerText;
 	        if ( policy == 'Same Day Loan' ) {
 	        	let policymsg = document.createElement('DIV');
 					policymsg.className = "policy-message-red";
 					policymsg.innerHTML =
 					`<span>${vm.parentCtrl.$translate.instant('customized.arc.sameday')}</span>`;
-					this.tester.children[1].append(policymsg);
+					this.requestafter.children[1].append(policymsg);
 	        }
 		}
-		setTimeout(slamIt, 300);
+		setTimeout(setSamedaypolicywarning, 300);
 
         function isMeaa() {
             if (vm.parentCtrl.loc.location.libraryCode == 'MEAA') {
@@ -202,11 +202,37 @@
             }
             return false;
         }
+        function isVercGubl() {
+                var vercgubl = vm.parentCtrl.loc.location.subLocationCode;
+            if (vercgubl == '808' || vercgubl == '810') {
+                return true;
+            }
+            return false;
+        }
     }]);
     app.component('prmLocationItemAfter', {
         bindings: {parentCtrl: '<'},
         controller: 'ItemCommentComponentController',
-        template: '<span style="padding: 10px; font-size: 0.9em; color: red; display: flex; max-width: 200px;" ng-if="$ctrl.isLabisalp()"><span translate="customized.arc.labisalp"></span></span><span style="padding: 10px; font-size: 0.9em; color: red; display: flex; max-width: 200px;" ng-if="$ctrl.isCattedre()"><span translate="customized.arc.cattedre"></span></span><span style="padding: 10px; font-size: 0.9em; color: red; display: flex; max-width: 200px; display: flex !important; flex-direction: column;" ng-if="$ctrl.isMeaa() && $ctrl.isBtm()"><span translate="customized.arc.btm"></span> <a style="color: red; text-decoration: underline solid red;" href="http://www.arc.usi.ch/it/btm" target="_blank">http://www.arc.usi.ch/it/btm</a></span>'
+        template: '<span style="padding: 10px; font-size: 0.9em; color: red; display: flex; max-width: 200px;" ng-if="$ctrl.isLabisalp()"><span translate="customized.arc.labisalp"></span></span><span style="padding: 10px; font-size: 0.9em; color: red; display: flex; max-width: 200px;" ng-if="$ctrl.isCattedre()"><span translate="customized.arc.cattedre"></span></span><span style="padding: 10px; font-size: 0.9em; color: red; display: flex; max-width: 200px; display: flex !important; flex-direction: column;" ng-if="$ctrl.isMeaa() && $ctrl.isBtm()"><span translate="customized.arc.btm"></span> <a style="color: red; text-decoration: underline solid red;" href="http://www.arc.usi.ch/it/btm" target="_blank">http://www.arc.usi.ch/it/btm</a></span><span style="padding: 10px; font-size: 0.9em; color: red; display: flex; max-width: 200px;" ng-if="$ctrl.isVercGubl()"><span translate="customized.arc.vercgubl"></span></span>'
+    });
+
+    // -------- BiUSI - show open/closed stacks at individual location level -----------------
+    //
+    app.controller( 'CurrLocationFuController', [function () {
+        var vm = this;
+        vm.isCurrOpenFuUsi = isCurrOpenFuUsi;
+        function isCurrOpenFuUsi() {
+            const openLocations = [ '201', '202', '208', '801', '803', '804', '805', '808', '810', '819', '823', '827', '831', '832', '833', '834', '841', '842', '843', '844' ];
+                if ( vm.parentCtrl.currLoc.location.organization == '41SLSP_USI' &&openLocations.includes( vm.parentCtrl.currLoc.location.subLocationCode ) ) {
+                    return true;
+                }
+                return false;
+        }
+    }]);
+    app.component('prmLocationHoldingsAfter', {
+        bindings: { parentCtrl: '<' },
+        controller: 'CurrLocationFuController',
+        template: '<div class="open-closed-container" ng-if="$ctrl.isCurrOpenFuUsi()"><div class="open-closed-img"><img src="/discovery/custom/41SLSP_USI-BiUSI/img/open_shelf_traced_icon.png" alt=""></div><div class="open-closed-txt"><span style="padding: 0.1em 0px 0px; font-size: 1em; color: green; display: flex; max-width: 200px;" translate="customized.arc.openshelf"></span></div></div><div class="open-closed-container" ng-if="!$ctrl.isCurrOpenFuUsi()"><div class="open-closed-img"><img src="/discovery/custom/41SLSP_USI-BiUSI/img/closed_shelf_traced_icon.png" alt=""></div><div class="open-closed-txt"><span style="padding: 0.1em 0px 0px; font-size: 1em; color: red; display: flex; max-width: 200px;" translate="customized.arc.closedshelf"></span></div></div>'
     });
 
 })();

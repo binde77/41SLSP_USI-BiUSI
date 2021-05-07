@@ -26,6 +26,7 @@ body {
 .available-facets .section-content .md-chips .md-chip strong span{
     font-family: 'standard_ct_lightlight', Source Sans Pro, Helvetica Neue, Helvetica, Arial, sans-serif;
     font-weight: 100;
+    font-size: 1.09em;
 }
 
 /* STANDARD MEDIUM */
@@ -799,6 +800,18 @@ md-tabs.tabs-as-app .back-button {
 md-tabs.tabs-as-app .back-button:hover:not([disabled]) {
     background-color: inherit !important;
     color: #222 !important;
+}
+
+/* locations */
+prm-location-holdings-after .open-closed-container {
+    display: flex;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: center;
+    margin-top: 0.5em;
+}
+prm-location-holdings-after .open-closed-container .open-closed-img {
+    margin-right: 0.5em;
 }
 
 /* items */
