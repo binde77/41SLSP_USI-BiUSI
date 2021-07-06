@@ -910,3 +910,11 @@ prm-request div.courier-info.bar.alert-bar > p {
     color: #3a3a3a;
     font-weight: 500;
 }
+
+/* user account - personal details customization */
+prm-personal-info-after div.layout-column {
+    width: fit-content;
+}
+prm-personal-info-after div.layout-column a.bar.alert-bar:hover {
+        background-color: #b95f10 !important;
+}

@@ -144,6 +144,62 @@
         template: '<div style="display:none">{{$ctrl.getAlert()}}</div>'
     });
 
+    //------------------------------ edit personal details  ---------------------------
+
+    app.controller('EditPersonalDetailsController', [function () {
+
+        this.detailsBaseEdu = "https:\/\/eduid.ch";
+        this.detailsBaseReg = "https:\/\/registration.slsp.ch\/library-card\/";
+        this.exclude = ['STAFF', '11', '12', '13', '14', '15', '16', '91', '92', '99'];
+        this.grpA = ['11', '91', '92'];
+        this.grpB = ['12', '13', '14', '15', '16'];
+
+        this.getPatronGrp = function() {
+            if (this.parentCtrl.personalInfoService.personalInfo !== undefined) {
+                let patron = this.parentCtrl.personalInfoService.personalInfo.patronstatus[0].registration[0].institution[0].patronstatuscode;
+                if (!this.exclude.includes(patron)) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+            return false;
+        }
+
+        this.grpLabelA = function() {
+            if (this.parentCtrl.personalInfoService.personalInfo !== undefined) {
+                let labelA = this.parentCtrl.personalInfoService.personalInfo.patronstatus[0].registration[0].institution[0].patronstatuscode;
+                if (this.grpA.includes(labelA)) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+            return false;
+        }
+
+
+        this.grpLabelB = function() {
+            if (this.parentCtrl.personalInfoService.personalInfo !== undefined) {
+                let labelB = this.parentCtrl.personalInfoService.personalInfo.patronstatus[0].registration[0].institution[0].patronstatuscode;
+                if (this.grpB.includes(labelB)) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+            return false;
+        }
+    }])
+    app.component('prmPersonalInfoAfter', {
+        bindings: { parentCtrl: '<' },
+        controller: 'EditPersonalDetailsController',
+        template: '<md-card ng-if="$ctrl.grpLabelA()" translate="customized.libraries.details" flex="100" class="bar alert-bar courier-info"></md-card><md-card ng-if="$ctrl.grpLabelB()" translate="customized.slsp.details" flex="100" class="bar alert-bar courier-info"></md-card><div layout="column"> <md-button ng-if="$ctrl.getPatronGrp()" href="{{ $ctrl.detailsBaseEdu }}" target="_blank" layout="row" class="courier-info bar alert-bar layout-align-left-center layout-row" layout-align="left center"><span class="md-subhead"><prm-icon  class="rotate-20 margin-right-small" icon-type="svg" svg-icon-set="primo-ui" icon-definition="pencil"></prm-icon><span  class="md-subhead" translate="customized.personal.details"></span></md-button><br /><md-button ng-if="$ctrl.getPatronGrp()" href="{{ $ctrl.detailsBaseReg }}" target="_blank" layout="row" class="courier-info bar alert-bar layout-align-left-center layout-row" layout-align="left center"><prm-icon class="rotate-20 margin-right-small" icon-type="svg" svg-icon-set="primo-ui" icon-definition="account-card-details"></prm-icon><span  class="md-subhead" translate="customized.libcard.number"></span></md-button ></div>'
+    });
+
 
     // -------- BiUSI - Insert customized texts for items from MEAA -----------------
     app.controller('ItemCommentComponentController', ['$element', function ($element) {
@@ -220,10 +276,17 @@
     //
     app.controller( 'CurrLocationFuController', [function () {
         var vm = this;
-        vm.isCurrOpenFuUsi = isCurrOpenFuUsi;
-        function isCurrOpenFuUsi() {
+        vm.isCurrOpenFu = isCurrOpenFu;
+        vm.isUsi = isUsi;
+        function isCurrOpenFu() {
             const openLocations = [ '201', '202', '208', '801', '803', '804', '805', '808', '810', '819', '823', '827', '831', '832', '833', '834', '841', '842', '843', '844' ];
-                if ( vm.parentCtrl.currLoc.location.organization == '41SLSP_USI' &&openLocations.includes( vm.parentCtrl.currLoc.location.subLocationCode ) ) {
+                if ( openLocations.includes( vm.parentCtrl.currLoc.location.subLocationCode ) ) {
+                    return true;
+                }
+                return false;
+        }
+        function isUsi() {
+            if ( vm.parentCtrl.currLoc.location.organization == '41SLSP_USI' ) {
                     return true;
                 }
                 return false;
@@ -232,7 +295,7 @@
     app.component('prmLocationHoldingsAfter', {
         bindings: { parentCtrl: '<' },
         controller: 'CurrLocationFuController',
-        template: '<div class="open-closed-container" ng-if="$ctrl.isCurrOpenFuUsi()"><div class="open-closed-img"><img src="/discovery/custom/41SLSP_USI-BiUSI/img/open_shelf_traced_icon.png" alt=""></div><div class="open-closed-txt"><span style="padding: 0.1em 0px 0px; font-size: 1em; color: green; display: flex; max-width: 200px;" translate="customized.arc.openshelf"></span></div></div><div class="open-closed-container" ng-if="!$ctrl.isCurrOpenFuUsi()"><div class="open-closed-img"><img src="/discovery/custom/41SLSP_USI-BiUSI/img/closed_shelf_traced_icon.png" alt=""></div><div class="open-closed-txt"><span style="padding: 0.1em 0px 0px; font-size: 1em; color: red; display: flex; max-width: 200px;" translate="customized.arc.closedshelf"></span></div></div>'
+        template: '<div class="open-closed-container" ng-if="$ctrl.isCurrOpenFu() && $ctrl.isUsi()"><div class="open-closed-img"><img src="/discovery/custom/41SLSP_USI-BiUSI/img/open_shelf_traced_icon.png" alt=""></div><div class="open-closed-txt"><span style="padding: 0.1em 0px 0px; font-size: 1em; color: green; display: flex; max-width: 200px;" translate="customized.arc.openshelf"></span></div></div><div class="open-closed-container" ng-if="!$ctrl.isCurrOpenFu() && $ctrl.isUsi()"><div class="open-closed-img"><img src="/discovery/custom/41SLSP_USI-BiUSI/img/closed_shelf_traced_icon.png" alt=""></div><div class="open-closed-txt"><span style="padding: 0.1em 0px 0px; font-size: 1em; color: red; display: flex; max-width: 200px;" translate="customized.arc.closedshelf"></span></div></div>'
     });
 
 })();
