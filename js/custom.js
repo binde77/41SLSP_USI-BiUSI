@@ -62,6 +62,7 @@
         vm.biblinkText = "Library";
         vm.biblinkBase = getLink;
         vm.biblinkStyle = getStyle;
+        vm.MEAAclosureMessage = getMEAAclosureMessage;
 
         function getLibrary() {
             return vm.parentCtrl.currLoc.location.librarycodeTranslation;
@@ -80,11 +81,48 @@
         function getStyle() {
             return '';
         }
+        function getMEAAclosureMessage() {
+            // check if today is in given closure range
+            var today = new Date().getTime();
+            // the month is 0-indexed! For example, new Date(1995, 11, 17) resolves to December 17, 1995
+            var from = new Date(2021, 6, 21).getTime();
+            var to = new Date(2021, 7, 8).getTime();
+            var withinRange = today >= from && today <= to;
+            // return closure message, or return false
+            if ( withinRange ) {
+                switch ( vm.parentCtrl.userSessionManagerService.attributesMap.interfaceLanguage ) {
+                    case "it":
+                        return "Attenzione: servizi sospesi per chiusura estiva dal 26 luglio all’8 agosto";
+                    break;
+                    default:
+                        return "Attention: services suspended due to summer closure from 26 July to 8 August";
+                }
+            }
+            return false;
+        }
     }]);
     app.component('prmLocationItemsAfter', {
         bindings: { parentCtrl: '<' },
         controller: 'LibInfoController',
-        template: '<div layout="row" class="LibInfo" layout-align="start center"><span class="md-subhead"><a ng-href="{{ $ctrl.biblinkBase() }}" style="{{ $ctrl.biblinkStyle() }}" target="_blank"><img width="35px" ng-src="/discovery/custom/41SLSP_USI-BiUSI/img/information.png" />{{ $ctrl.getLibrary() }}</a></span></div>'
+        template: `
+            <div ng-if="!$ctrl.MEAAclosureMessage()" layout="row" class="LibInfo" layout-align="start center">
+                <span class="md-subhead">
+                    <a ng-href="{{ $ctrl.biblinkBase() }}" style="{{ $ctrl.biblinkStyle() }}" target="_blank">
+                        <img width="35px" ng-src="/discovery/custom/41SLSP_USI-BiUSI/img/information.png" />
+                        {{ $ctrl.getLibrary() }}
+                    </a>
+                </span>
+            </div>
+            <!-- With closure message -->
+            <div ng-if="$ctrl.MEAAclosureMessage()" layout="row" class="LibInfo" layout-align="start center">
+                <span class="md-subhead">
+                    <a ng-href="{{ $ctrl.biblinkBase() }}" style="{{ $ctrl.biblinkStyle() }}" target="_blank">
+                        <img width="35px" ng-src="/discovery/custom/41SLSP_USI-BiUSI/img/information.png" />
+                        {{ $ctrl.getLibrary() }}
+                    </a> - <span style="color: red;font-size: 15px;">{{ $ctrl.MEAAclosureMessage() }}</span>
+                </span>
+            </div>
+            `
     });
 
 
