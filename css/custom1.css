@@ -445,148 +445,176 @@ prm-alma-other-units button.layout-fill, prm-alma-other-members button.layout-fi
 }
 
 #brief {
-	order: 0 !important;
+    order: 0 !important;
 }
-
-#details {
-	order: 3 !important;
+#citationTrails {
+    order: 1 !important;
 }
-
-#links {
-	order: 4 !important;
+#searchWithinJournal {
+    order: 2 !important;
 }
-
 #getit_link1_0 {
-	order: 1 !important;
+    order: 3 !important;
 }
-
+#getit_link1_1 {
+    order: 4 !important;
+}
 #action_list {
-	order: 2 !important;
+    order: 5 !important;
 }
-
+#details {
+    order: 6 !important;
+}
+#links {
+    order: 7 !important;
+}
+#moreFromTheSameCourse {
+    order: 8 !important;
+}
+#moreFromTheSameCollection {
+    order: 9 !important;
+}
 #virtualBrowse {
-	order: 5 !important;
+    order: 10 !important;
 }
 
 /* Change of links in left navigation bar ENG */
-
 [aria-label="Top"] {
-	order: 0 !important;
+    order: 0 !important;
 }
-
-[aria-label="Details"] {
-	order: 4 !important;
+[aria-label="Citations"] {
+    order: 1 !important;
 }
-
-[aria-label="Links"] {
-	order: 5 !important;
+[aria-label="Search inside"] {
+    order: 2 !important;
 }
-
-[aria-label="Loan and request options"] {
-	order: 1 !important;
-}
-
-[aria-label="Send to"] {
-	order: 3 !important;
-}
-
-[aria-label="Virtual Browse"] {
-	order: 6 !important;
-}
-
 [aria-label="View Online"] {
-	order: 2 !important;
+    order: 3 !important;
 }
-
-/* Change of links in left navigation bar GER */
-
-[aria-label="Top"] {
-	order: 0 !important;
+[aria-label="Loan and request options"] {
+    order: 4 !important;
 }
-
+[aria-label="Send to"] {
+    order: 5 !important;
+}
 [aria-label="Details"] {
-	order: 4 !important;
+    order: 6 !important;
 }
-
 [aria-label="Links"] {
-	order: 5 !important;
+    order: 7 !important;
 }
-
-[aria-label="Ausleih- und Bestelloptionen"] {
-	order: 1 !important;
+[aria-label="Course"] {
+    order: 8 !important;
 }
-
-[aria-label="Senden an"] {
-	order: 3 !important;
+[aria-label="Collection"] {
+    order: 9 !important;
 }
-
-[aria-label="Virtuelles Regal"] {
-	order: 6 !important;
+[aria-label="Virtual Browse"] {
+    order: 10 !important;
 }
-
-[aria-label="Online ansehen"] {
-	order: 2 !important;
-}
-
-/* Change of links in left navigation bar FRE */
-
-[aria-label="Haut"] {
-	order: 0 !important;
-}
-
-[aria-label="D&#233;tails"] {
-	order: 4 !important;
-}
-
-[aria-label="Liens"] {
-	order: 5 !important;
-}
-
-[aria-label="Options de pr&#234;t et de demande"] {
-	order: 1 !important;
-}
-
-[aria-label="Envoyer vers"] {
-	order: 3 !important;
-}
-
-[aria-label="Etag&#232;re virtuelle"] {
-	order: 6 !important;
-}
-
-[aria-label="Consulter en ligne"] {
-	order: 2 !important;
-}
-
-/* Change of links in left navigation bar ITA */
-
+/* Change of links in left navigation bar GER */
 [aria-label="Top"] {
-	order: 0 !important;
+    order: 0 !important;
 }
-
-[aria-label="Dettagli"] {
-	order: 4 !important;
+[aria-label="Literatur"] {
+    order: 1 !important;
 }
-
-[aria-label="Link"] {
-	order: 5 !important;
+[aria-label="Suche innerhalb"] {
+    order: 2 !important;
 }
-
-[aria-label="Opzioni di prestito e richiesta"]{
-	order: 1 !important;
+[aria-label="Online ansehen"] {
+    order: 3 !important;
 }
-
-[aria-label="Invia a"] {
-	order: 3 !important;
+[aria-label="Ausleih- und Bestelloptionen"] {
+    order: 4 !important;
 }
-
-[aria-label="Scorri virtualmente"] {
-	order: 5 !important;
+[aria-label="Senden an"] {
+    order: 5 !important;
 }
-
+[aria-label="Details"] {
+    order: 6 !important;
+}
+[aria-label="Links"] {
+    order: 7 !important;
+}
+[aria-label="Seminar"] {
+    order: 8 !important;
+}
+[aria-label="Sammlung"] {
+    order: 9 !important;
+}
+[aria-label="Virtuelles Regal"] {
+    order: 10 !important;
+}
+/* Change of links in left navigation bar FRE */
+[aria-label="Haut"] {
+    order: 0 !important;
+}
+[aria-label="Citations"] {
+    order: 1 !important;
+}
+[aria-label="Rechercher dans"] {
+    order: 2 !important;
+}
+[aria-label="Consulter en ligne"] {
+    order: 3 !important;
+}
+[aria-label="Options de pr&#234;t et de demande"] {
+    order: 4 !important;
+}
+[aria-label="Envoyer vers"] {
+    order: 5 !important;
+}
+[aria-label="D&#233;tails"] {
+    order: 6 !important;
+}
+[aria-label="Liens"] {
+    order: 7 !important;
+}
+[aria-label="Cours"] {
+    order: 8 !important;
+}
+[aria-label="Collection"] {
+    order: 9 !important;
+}
+[aria-label="Etag&#232;re virtuelle"] {
+    order: 10 !important;
+}
+/* Change of links in left navigation bar ITA */
+[aria-label="Top"] {
+    order: 0 !important;
+}
+[aria-label="Citazioni"] {
+    order: 1 !important;
+}
+[aria-label="Cerca in"] {
+    order: 2 !important;
+}
 [aria-label="Visualizza online"] {
-	order: 2 !important;
+    order: 3 !important;
 }
+[aria-label="Opzioni di prestito e richiesta"] {
+    order: 4 !important;
+}
+[aria-label="Invia a"] {
+    order: 5 !important;
+}
+[aria-label="Dettagli"] {
+    order: 6 !important;
+}
+[aria-label="Link"] {
+    order: 7 !important;
+}
+[aria-label="Corso"] {
+    order: 8 !important;
+}
+[aria-label="Collezione"] {
+    order: 9 !important;
+}
+[aria-label="Scorri virtualmente"] {
+    order: 10 !important;
+}
+
 
 /******************************************************************************/
 /************************************ Help Page *******************************/
@@ -755,6 +783,15 @@ prm-logo .product-logo {
 }
 
 /* Full details */
+
+/* Services list */
+prm-full-view .services-index-under .md-button {
+    text-overflow: clip;
+    white-space: normal;
+    line-height: 16px;
+    padding: 7px 15px 7px 5px;
+}
+
 /* request button */
 prm-request-services button.md-button.button-as-link {
     font-weight: 700;
