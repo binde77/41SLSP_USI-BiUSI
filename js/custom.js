@@ -62,6 +62,7 @@
         vm.biblinkText = "Library";
         vm.biblinkBase = getLink;
         vm.biblinkStyle = getStyle;
+        vm.isMeaa = isMeaa;
         vm.MEAAclosureMessage = getMEAAclosureMessage;
 
         function getLibrary() {
@@ -80,6 +81,12 @@
         }
         function getStyle() {
             return '';
+        }
+        function isMeaa() {
+            if (vm.parentCtrl.loc.location.libraryCode == 'MEAA' || vm.parentCtrl.currLoc.location.libraryCode == 'MEAA') {
+                return true;
+            }
+            return false;
         }
         function getMEAAclosureMessage() {
             // check if today is in given closure range
@@ -105,7 +112,15 @@
         bindings: { parentCtrl: '<' },
         controller: 'LibInfoController',
         template: `
-            <div ng-if="!$ctrl.MEAAclosureMessage()" layout="row" class="LibInfo" layout-align="start center">
+            <div ng-if="!$ctrl.isMeaa()" layout="row" class="LibInfo" layout-align="start center">
+                <span class="md-subhead">
+                    <a ng-href="{{ $ctrl.biblinkBase() }}" style="{{ $ctrl.biblinkStyle() }}" target="_blank">
+                        <img width="35px" ng-src="/discovery/custom/41SLSP_USI-BiUSI/img/information.png" />
+                        {{ $ctrl.getLibrary() }}
+                    </a>
+                </span>
+            </div>
+            <div ng-if="$ctrl.isMeaa() && !$ctrl.MEAAclosureMessage()" layout="row" class="LibInfo" layout-align="start center">
                 <span class="md-subhead">
                     <a ng-href="{{ $ctrl.biblinkBase() }}" style="{{ $ctrl.biblinkStyle() }}" target="_blank">
                         <img width="35px" ng-src="/discovery/custom/41SLSP_USI-BiUSI/img/information.png" />
@@ -114,7 +129,7 @@
                 </span>
             </div>
             <!-- With closure message -->
-            <div ng-if="$ctrl.MEAAclosureMessage()" layout="row" class="LibInfo" layout-align="start center">
+            <div ng-if="$ctrl.isMeaa() && $ctrl.MEAAclosureMessage()" layout="row" class="LibInfo" layout-align="start center">
                 <span class="md-subhead">
                     <a ng-href="{{ $ctrl.biblinkBase() }}" style="{{ $ctrl.biblinkStyle() }}" target="_blank">
                         <img width="35px" ng-src="/discovery/custom/41SLSP_USI-BiUSI/img/information.png" />
