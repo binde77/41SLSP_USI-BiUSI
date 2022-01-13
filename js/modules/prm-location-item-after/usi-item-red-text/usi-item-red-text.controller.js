@@ -12,6 +12,14 @@ export class usiItemRedTextController {
         const itempolicyElement = this.element.parentElement.parentElement.children[0].children[0].children[0].children[1];
 
         if ( typeof itempolicyElement === "undefined" ) {
+            let segnatura = this.afterCtrl.parentCtrl.loc.location.callNumber;
+            if ( segnatura.startsWith("BUL B") || segnatura.startsWith("BUL C") || segnatura.startsWith("BUL D") || segnatura.startsWith("BUL F") || segnatura.startsWith("BUL N") || segnatura.startsWith("BUL T") ) {
+                let fakePolicy = document.createElement("div");
+                fakePolicy.innerText = this.usiConfigService.getLabel(this.config, 'sameday');
+    		    fakePolicy.style.color = "red";
+                console.log(this.element.parentElement.parentElement.children[0].children[0].children[0]);
+                this.element.parentElement.parentElement.children[0].children[0].children[0].append(fakePolicy);
+            }
             return;
         }
 
