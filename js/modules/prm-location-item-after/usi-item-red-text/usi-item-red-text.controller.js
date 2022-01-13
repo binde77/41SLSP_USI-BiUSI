@@ -30,7 +30,6 @@ export class usiItemRedTextController {
 
     // $onInit() {
     getText() {
-        this.itemtext = "I'm the getText() item text";
         this.holdinglocation = {
             message: false,
             btm: false,
@@ -38,11 +37,6 @@ export class usiItemRedTextController {
             contactlink: ""
         };
         try {
-            console.log("***USI*** usiItemRedText.$onInit\n\n");
-
-            // this.meaa = ( this.afterCtrl.parentCtrl.loc.location.libraryCode == 'MEAA' ) ? true : false;
-            // console.log(this.meaa);
-
             switch( this.afterCtrl.parentCtrl.loc.location.subLocationCode ) {
                 case '820':
                 	this.holdinglocation.message = true;
