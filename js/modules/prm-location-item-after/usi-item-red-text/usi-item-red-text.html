@@ -1,0 +1,6 @@
+<span ng-if="$ctrl.getText().message && !$ctrl.getText().btm" class="item-red-message-nolink">
+	<span>{{ $ctrl.getText().text }}</span>
+</span>
+<span ng-if="$ctrl.getText().message && $ctrl.getText().btm" class="item-red-message-link">
+	<span>{{ $ctrl.getText().text }} <a href="{{$ctrl.getText().contactlink}}" target="_blank">{{$ctrl.getText().contactlink.substring(7)}}</a></span>
+</span>

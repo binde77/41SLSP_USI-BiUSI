@@ -1,21 +1,21 @@
 /***************  Testing fonts  ******************/
 @font-face {
     font-family: 'standard_ct_lightlight';
-    src: url('standardct_light_macroman/standard-light-webfont.eot');
-    src: url('standardct_light_macroman/standard-light-webfont.eot?#iefix') format('embedded-opentype'),
-    url('standardct_light_macroman/standard-light-webfont.woff2') format('woff2'),
-    url('standardct_light_macroman/standard-light-webfont.woff') format('woff'),
-    url('standardct_light_macroman/standard-light-webfont.ttf') format('truetype'),
-    url('standardct_light_macroman/standard-light-webfont.svg#standard_ct_lightlight') format('svg');
+    src: url('/discovery/custom/41SLSP_USI-BiUSI/css/standardct_light_macroman/standard-light-webfont.eot');
+    src: url('/discovery/custom/41SLSP_USI-BiUSI/css/standardct_light_macroman/standard-light-webfont.eot?#iefix') format('embedded-opentype'),
+    url('/discovery/custom/41SLSP_USI-BiUSI/css/standardct_light_macroman/standard-light-webfont.woff2') format('woff2'),
+    url('/discovery/custom/41SLSP_USI-BiUSI/css/standardct_light_macroman/standard-light-webfont.woff') format('woff'),
+    url('/discovery/custom/41SLSP_USI-BiUSI/css/standardct_light_macroman/standard-light-webfont.ttf') format('truetype'),
+    url('/discovery/custom/41SLSP_USI-BiUSI/css/standardct_light_macroman/standard-light-webfont.svg#standard_ct_lightlight') format('svg');
 }
 @font-face {
     font-family: 'standard_ct_medium';
-    src: url('standardct_medium_macroman/standard-medium-webfont.eot');
-    src: url('standardct_medium_macroman/standard-medium-webfont.eot?#iefix') format('embedded-opentype'),
-    url('standardct_medium_macroman/standard-medium-webfont.woff2') format('woff2'),
-    url('standardct_medium_macroman/standard-medium-webfont.woff') format('woff'),
-    url('standardct_medium_macroman/standard-medium-webfont.ttf') format('truetype'),
-    url('standardct_medium_macroman/standard-medium-webfont.svg#standard_ct_lightlight') format('svg');
+    src: url('/discovery/custom/41SLSP_USI-BiUSI/css/standardct_medium_macroman/standard-medium-webfont.eot');
+    src: url('/discovery/custom/41SLSP_USI-BiUSI/css/standardct_medium_macroman/standard-medium-webfont.eot?#iefix') format('embedded-opentype'),
+    url('/discovery/custom/41SLSP_USI-BiUSI/css/standardct_medium_macroman/standard-medium-webfont.woff2') format('woff2'),
+    url('/discovery/custom/41SLSP_USI-BiUSI/css/standardct_medium_macroman/standard-medium-webfont.woff') format('woff'),
+    url('/discovery/custom/41SLSP_USI-BiUSI/css/standardct_medium_macroman/standard-medium-webfont.ttf') format('truetype'),
+    url('/discovery/custom/41SLSP_USI-BiUSI/css/standardct_medium_macroman/standard-medium-webfont.svg#standard_ct_lightlight') format('svg');
 }
 /* STANDARD LIGHT */
 body {
@@ -310,6 +310,24 @@ div.custom-links-container.layout-wrap.layout-align-sm-start-start.layout-align-
 span.section-title-header:hover {
     color: #8a8a8a !important;
 }
+
+/*pagination select buttons*/
+.md-mini.md-button.md-primoExplore-theme.md-ink-ripple:hover {
+    color: white !important;
+}
+.md-mini.md-button.md-primoExplore-theme.md-ink-ripple {
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    min-height: 30px;
+    font-size: 0.8rem;
+    display: inline-block;
+}
+.results-per-page>span {
+    font-size: 0.95rem;
+}
+
 /*underlined search results*/
 /*.text-highlight, mark {
     box-shadow: inset 0 -0.15em 0 0 #8dd8d8;
@@ -747,6 +765,55 @@ prm-logo .product-logo {
     padding: 0.6em;
 }
 
+/*Header menu*/
+@media (max-width: 800px) {
+    prm-user-area-expandable button.user-button.user-menu-button.button-with-menu-arrow.md-button.md-primoExplore-theme.md-ink-ripple, prm-user-area-expandable-after  {
+        display: none !important;
+    }
+    button#signInBtn {
+        display: block;
+    }
+}
+
+primo-explore.logged-out prm-user-area-expandable md-menu {
+    display: none;
+}
+
+/* Menu bar language switch */
+usi-lang-switch-component {
+    padding-right: 16px;
+}
+
+usi-lang-switch-component .md-button.md-lang-button {
+    height: 29px;
+    min-height: 29px;
+    margin: 15px 1px !important;
+    min-width: 29px;
+    width: 29px;
+    line-height: 23px;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    border-radius: 3px;
+}
+
+usi-lang-switch-component .md-button:not(.disable-hover):hover:not([disabled]):hover:not([disabled]):hover {
+    background: rgb(232, 129, 39);
+}
+
+usi-lang-switch-component .md-button.md-lang-button.active {
+    border-color: rgba(19, 18, 18, 0.85);
+}
+
+usi-lang-switch-component a {
+    color: rgba(255, 255, 255, 0.85);
+    display: inline-block;
+    padding-bottom: 2px;
+}
+
+usi-lang-switch-component a:hover {
+    color: rgba(255, 255, 255, 0.85);
+}
+
 /* Homepage */
 .ps_content a:hover {
     background-color: rgba(47, 47, 47, 0.1) !important;
@@ -873,9 +940,29 @@ prm-location-item-after {
 }
 prm-location-item-after .policy-message-red {
     display: block;
-    color: red;
+    color: rgb(240, 0, 0);
     font-size: 14px;
     max-width: 9em;
+}
+.item-red-message-nolink {
+    display: flex;
+    max-width: 200px;
+    padding: 10px;
+    font-size: 0.9em;
+    color: rgb(240, 0, 0);
+}
+.item-red-message-link {
+    display: flex !important;
+    flex-direction: column;
+    max-width: 200px;
+    padding: 10px;
+    font-size: 0.9em;
+    color: rgb(240, 0, 0);
+    display: flex;
+}
+.item-red-message-link a {
+    color: rgb(240, 0, 0);;
+    text-decoration: underline solid rgb(240, 0, 0);
 }
 
 /* library info link */

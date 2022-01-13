@@ -1,0 +1,20 @@
+<div class="open-closed-container" ng-if="$ctrl.usilocation.isopen && $ctrl.usilocation.isusi">
+	<div class="open-closed-img">
+		<img src="/discovery/custom/41SLSP_USI-BiUSI/img/open_shelf_traced_icon.png" alt="">
+	</div>
+	<div class="open-closed-txt">
+		<span style="padding: 0.1em 0px 0px; font-size: 1em; color: green; display: flex; max-width: 200px;">
+			{{::$ctrl.usiConfigService.getLabel($ctrl.config, 'open')}}
+		</span>
+	</div>
+</div>
+<div class="open-closed-container" ng-if="!$ctrl.usilocation.isopen && $ctrl.usilocation.isusi">
+	<div class="open-closed-img">
+		<img src="/discovery/custom/41SLSP_USI-BiUSI/img/closed_shelf_traced_icon.png" alt="">
+	</div>
+	<div class="open-closed-txt">
+		<span style="padding: 0.1em 0px 0px; font-size: 1em; color: red; display: flex; max-width: 200px;">
+			{{::$ctrl.usiConfigService.getLabel($ctrl.config, 'closed')}}
+		</span>
+	</div>
+</div>

@@ -1,0 +1,12 @@
+{
+  "name": "usi-user-area-expandable-after",
+  "version": "1.0.0",
+  "description": "",
+  "main": "usi-user-area-expandable-after.module.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Philipp Schulz - edits by Silvio Bindella",
+  "license": "ISC"
+}
