@@ -17,7 +17,7 @@ export class usiItemRedTextController {
                 let fakePolicy = document.createElement("div");
                 fakePolicy.innerText = this.usiConfigService.getLabel(this.config, 'sameday');
     		    fakePolicy.style.color = "red";
-                console.log(this.element.parentElement.parentElement.children[0].children[0].children[0]);
+                fakePolicy.style["font-size"] = "14px";
                 this.element.parentElement.parentElement.children[0].children[0].children[0].append(fakePolicy);
             }
             return;

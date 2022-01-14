@@ -13,7 +13,7 @@ export class usiLocationOpenCloseController {
         }
         try {
             console.log("***USI*** usiLocationOpenCloseController.$onInit\n\n");
-            let openLocations = [ '201', '202', '208', '801', '803', '804', '805', '808', '810', '819', '823', '827', '831', '832', '833', '834', '841', '842', '843', '844' ];
+            let openLocations = [ '201', '202', '208', '801', '803', '804', '805', '808', '810', '819', '823', '827', '831', '832', '833', '834', '841', '842', '843', '844', '846' ];
             this.usilocation.isopen = ( openLocations.includes( this.afterCtrl.parentCtrl.currLoc.location.subLocationCode ) ) ? true : false;
             this.usilocation.isusi = ( this.afterCtrl.parentCtrl.currLoc.location.organization == '41SLSP_USI' ) ? true : false;
         }
